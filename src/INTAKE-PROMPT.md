@@ -1,6 +1,6 @@
 # Intake prompt
 
-**Version 1.0 — Released.** Use the `intake` skill. This prompt starts a conversation; it is not an authorization service.
+Package version: [VERSION](VERSION). Use the `intake` skill. This prompt starts a conversation; it is not an authorization service.
 
 ```text
 Clarify this request using intake mode task or architecture, as appropriate.
@@ -21,13 +21,19 @@ approved behavior contract with examples, non-goals, scope, checks and budget.
 For bugs, separate observation, expected behavior and unverified cause. Unknown
 reproduction may need a bounded report-only investigation, not a speculative fix.
 
+Before task approval, record an existing committed, owner-approved local delivery
+policy revision, its full target Git commit, adopted policy paths, and the upstream
+provenance reference as recorded at that revision. Do not use the task's eventual hash.
+Keep that policy baseline through completion; newer rules do not silently replace it.
 Read back the exact interpretation and ask for approval. Record my real response
 and the document/commit it covers. Never manufacture approval or infer it from silence.
 No code or executable test suite during intake. Stop on an unanswered material
 question or the preparation budget. No additional interviewing agents.
 
-Prepare only behavior/public-interface inputs for A/B, not this conversation or
-implementation ideas. The shared LESSONS.md is not input for those blind roles.
+Prepare behavior/public-interface inputs and role-permitted policy text from the
+pinned revision for A/B, not this conversation or implementation ideas. Supply the
+snapshot without requiring implementation or history access. The shared LESSONS.md
+is not input for those blind roles.
 Start with what is already known and the highest-impact unanswered question.
 ```
 

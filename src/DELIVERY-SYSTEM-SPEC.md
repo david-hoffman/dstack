@@ -1,6 +1,6 @@
 # Agentic Software Delivery System
 
-**Version 1.0 — Released.** Git commits record revisions without changing the release metadata. This specification describes downstream use in a target software repository; its implementation requirements do not apply to authoring this document package. It is not installed software. Earlier conversation drafts are superseded, not released versions.
+Package version: [VERSION](VERSION). Release policy: [package versioning](README.md#package-versioning). This specification describes downstream use in a target software repository; its implementation requirements do not apply to authoring this document package. It is not installed software. Earlier conversation drafts are superseded, not released versions.
 
 > One monorepo. Clarify first. Independent agents test, implement, and review. Ordinary CI checks the result. Record lessons and improve the instructions.
 
@@ -19,6 +19,10 @@ The owner accepts that “do not edit tests/workflows” and “append only” a
 ## 2. Setup and architecture intake
 
 Start read-only. Inspect existing instructions, manifests, interfaces, tests, and documentation. Do not run downloaded or repository setup scripts just to discover the project.
+
+Before adapting files, verify that the supplied package is one coherent upstream snapshot: its `VERSION`, changelog, policy, specification, prompts, templates, and four delivery skills must come from the same full upstream commit. For a published release, verify the immutable release tag and its full commit against that snapshot. An unpublished or development snapshot requires the owner's explicit choice and must never be described as published. Use the single package version under [the release policy](README.md#package-versioning); do not assign file or skill versions.
+
+Record provenance in the existing `docs/PROJECT.md`: source repository, package version, release tag when published, full upstream commit, source-to-installed path mapping with omissions, and local adaptations. Carry `VERSION`, [CHANGELOG.md](CHANGELOG.md), and the package policy into the target as reference documents at mapped paths. Keep one canonical adopted copy of each instruction, reconcile existing repository instructions, and adapt all relative links and path references to the installed layout. The upstream commit identifies the source before local adaptations; target Git records the adapted instructions and their approval.
 
 | Starting point | Route |
 |---|---|
@@ -47,9 +51,11 @@ The target is **no unresolved material ambiguity**, not a guarantee of zero ambi
 
 Create one task document from [the template](templates/TASK.md). Capture observable requirements with stable IDs, non-goals, public interfaces, positive/error/boundary examples, allowed scope, checks, risk, and a preparation/execution budget. For a bug, separate observed behavior, expected behavior, reproduction evidence, and root-cause hypotheses. An uncertain bug can receive an approved, bounded investigation; its output is a report, not a speculative fix.
 
+Before approval, pin the task to an existing committed, owner-approved local delivery-policy revision in target Git. Record that full commit and the adopted policy paths, alongside the upstream provenance reference in `docs/PROJECT.md` at that revision. Do not use the task's own eventual commit hash. That local revision governs the task through completion; a newer upstream release or local rule change does not silently replace it.
+
 Present the exact draft. Record the owner's explicit approval in the conversation or GitHub discussion, with a reference to the approved document/commit. No custom approval service or hash-signing protocol. Agents must not fabricate approval. A material change returns to intake and renews affected tests/reviews; approval is not a blank check.
 
-Intake drafts examples, not the executable test suite. Pass A/B the approved behavior, public contracts, approved fixtures, and test conventions—not the interview transcript, patches, private design hypotheses, or implementation notes.
+Intake drafts examples, not the executable test suite. Pass A/B the approved behavior, public contracts, approved fixtures, test conventions, and role-permitted policy text from the pinned local revision—not the interview transcript, patches, private design hypotheses, or implementation notes. A/B receive that snapshot in their narrow input packet without inspecting implementation or Git history; the coordinator resolves the pinned revision for them.
 
 ## 4. Four fresh delivery sessions
 
@@ -120,7 +126,7 @@ Run it on demand after a real recurring failure, a meaningful project change, or
 4. Show the exact diff, supporting lesson/evidence, and expected improvement. Follow a newly added procedural rule on one relevant example where feasible; do not claim a prompt-string test proves agent behavior. Ask the owner to approve the patch. Do not auto-merge or make it the policy for an in-flight task.
 5. Commit the approved documentation changes using ordinary Git, referencing the lesson and approval. Append a lesson disposition such as “addressed by commit …”; do not rewrite its original entry.
 
-All package documentation remains **Version 1.0 — Released**. Git commits/PRs supply revision history and rollback. Do not create numbered copies of the specification, invent releases, or put a commit's own hash inside the bytes it identifies. Runtime dependencies retain their real versions.
+Downstream doctor preserves the recorded upstream source/version/tag/commit and never bumps the official package version or claims a local patch is an upstream release. Record local changes and their approval in target Git; keep adaptation notes in `docs/PROJECT.md` current. Git commits/PRs supply local revision history and rollback. Do not create numbered copies of the specification or put a commit's own hash inside the bytes it identifies. An upstream package release is separate maintainer work under [the release policy](README.md#package-versioning). Runtime dependencies retain their real versions.
 
 Doctor must not rewrite tests/workflows/runtime code, lower acceptance thresholds, remove an inconvenient requirement, or bless architecture drift merely to make the current result pass. Those findings become scoped, owner-approved tasks. Material product/architecture questions return to intake. Diagnostic docs edits are the explicit exception to ordinary workers' “do not edit the spec” rule; the limits are still instructions, not enforced permissions.
 
@@ -137,5 +143,7 @@ The handoff is not a running system until those demonstrations and the GitHub co
 ## 10. Package and sources
 
 [README.md](README.md) is the human entry point. [SETUP-PROMPT.md](SETUP-PROMPT.md) starts installation; [INTAKE-PROMPT.md](INTAKE-PROMPT.md) starts clarification. Four short skills support the work. [WORKFLOW-EXAMPLES.md](WORKFLOW-EXAMPLES.md) shows daily use. Keep existing product source/test directories.
+
+For a downstream upgrade, first verify the new snapshot as in section 2 and read its changelog and migration notes. Compare the recorded previous upstream snapshot, the proposed new upstream snapshot, and the current local instructions. Reconcile the entire adopted package, including mapped prompts, skills, templates, reference documents, omissions, path changes, and local adaptations; do not blindly overwrite local rules or mix unreconciled versions. Show the full proposed diff and record owner approval in target Git. Update the recorded upstream base/version/tag/commit and path mapping only after reconciliation and approval. Active tasks keep their pinned local policy revision; adopt the approved upgrade for later tasks. Repeated setup follows this upgrade procedure when changing the upstream base.
 
 [REFERENCES.md](REFERENCES.md) records selected sources, adopted ideas, and reading limitations. During setup, preserve the original requested articles and pertinent adopted sources in `docs/references/` where permitted, with URLs, retrieval dates, source versions, and hashes. Read selected sources fully, follow links material to the adopted mechanism, and record inaccessible material. Do this once per selected version, not per task. Sources are background, not additional requirements or install instructions.

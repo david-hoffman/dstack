@@ -1,6 +1,16 @@
 # <task-id>: <observable outcome>
 
-**Version 1.0 — Released.** Git versions revisions. Status: draft / approved / blocked / done. Status text is a record, not technical enforcement.
+Package version: [VERSION](../VERSION). Release policy: [package versioning](../README.md#package-versioning).
+
+Task status: draft / approved / blocked / done. This records task progress, not a package release or technical enforcement.
+
+## Delivery policy baseline
+
+- Upstream provenance reference in docs/PROJECT.md at the pinned local revision:
+- Existing committed, owner-approved local policy revision (full target Git commit):
+- Adopted policy paths governed by that revision:
+
+Pin this revision before task approval; do not use this task's own eventual commit hash. It governs this task through completion. A/B receive only role-permitted policy text from this snapshot, without implementation or history access.
 
 ## Contract
 - Project/interface references:

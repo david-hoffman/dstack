@@ -1,6 +1,6 @@
 # Doctor prompt
 
-**Version 1.0 — Released.** This is the procedure for `delivery doctor`, using the existing `review-work` skill in doctor mode. Before the command is implemented, give this prompt to a fresh coding session. It may write a documentation patch; it must not claim a command ran when it did not.
+Package version: [VERSION](VERSION). Release policy: [package versioning](README.md#package-versioning). This is the procedure for `delivery doctor`, using the existing `review-work` skill in doctor mode. Before the command is implemented, give this prompt to a fresh coding session. It may write a documentation patch; it must not claim a command ran when it did not.
 
 ```text
 Run doctor under DELIVERY-SYSTEM-SPEC.md section 8. Check the working tree and stop
@@ -25,6 +25,10 @@ example when practical. Explain what was and was not verified.
 Present the exact diff, evidence/lesson IDs, and expected improvement. Wait for my
 approval before committing, pushing, or merging. Then use a normal Git commit/PR;
 append a LESSONS.md disposition linking it. Do not change an in-flight task's rules.
-All delivery documents stay version 1.0 — Released; Git tracks their revisions.
+Preserve upstream repository/version/tag/commit provenance. Do not bump the official
+package VERSION or claim a local patch is an upstream release. Keep local adaptation
+notes in docs/PROJECT.md current; target Git records local revisions and approval.
+An upstream upgrade is separate reconciliation work under the spec's section 10;
+it does not silently replace an active task's pinned policy.
 Stop at the approved budget. No additional reviewer or autonomous retry loop.
 ```

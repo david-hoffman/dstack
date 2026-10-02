@@ -1,6 +1,6 @@
 # Handoff: organize the document-authoring repository
 
-**Version 1.0 — Released.**
+Package version: [src/VERSION](src/VERSION). Release policy: [package versioning](src/README.md#package-versioning).
 
 ## Repository purpose
 
@@ -16,7 +16,7 @@ Organize this clean repository for document authoring. Make only the documentati
 
 2. **Explain.** Create or update root `README.md` and `AGENTS.md`. State that contributors maintain the reusable documents, not a software implementation. Keep the README short and human-readable, with links to the actual canonical specification, prompts, skills, and templates. Distinguish contributor guidance from instructions for using the package elsewhere.
 
-3. **Preserve.** Keep the folders under `src/` and root package documents where they are. Do not duplicate or activate skills. Rename source instruction templates such as `AGENTS.md` or `CLAUDE.md` to `AGENTS.template.md` or `CLAUDE.template.md`, where applicable, and update their references. Root `AGENTS.md` remains this repository's contributor guidance. Keep document metadata at **1.0 — Released**; do not alter external dependency versions or illustrative task states.
+3. **Preserve.** Keep the folders under `src/` and root package documents where they are. Do not duplicate or activate skills. Rename source instruction templates such as `AGENTS.md` or `CLAUDE.md` to `AGENTS.template.md` or `CLAUDE.template.md`, where applicable, and update their references. Root `AGENTS.md` remains this repository's contributor guidance. Follow the package versioning policy and changelog; do not alter external dependency versions or illustrative task states. The separate maintainer release checklist is authoring guidance, not a downstream delivery role.
 
 4. **Check and stop.** Check local links, paths, metadata, and the resulting diff using available tools. Refresh an existing checksum manifest only when affected. Report changed files, checks actually performed, and unresolved issues. Stop after the documentation work.
 

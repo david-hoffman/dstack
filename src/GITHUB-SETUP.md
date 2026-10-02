@@ -1,6 +1,6 @@
 # GitHub setup
 
-**Version 1.0 — Released.** One monorepo, ordinary Actions, native branch protection. No external control repository or custom GitHub App. These settings are instructions until applied and checked in the target software repository.
+Package version: [VERSION](VERSION). One monorepo, ordinary Actions, native branch protection. No external control repository or custom GitHub App. These settings are instructions until applied and checked in the target software repository.
 
 ## Implementer
 
