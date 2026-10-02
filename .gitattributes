@@ -1,2 +1,5 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Normalize detected text to LF in the repository and working tree.
+* text=auto eol=lf
+
+# Treat Markdown documents as text explicitly.
+*.md text
