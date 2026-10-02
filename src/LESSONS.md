@@ -1,6 +1,6 @@
 # Lessons
 
-**Version 1.0 — Released.** A short, append-only-by-instruction record of discoveries, not automatic model memory or authoritative policy.
+Package version: [VERSION](VERSION). A short, append-only-by-instruction record of discoveries, not automatic model memory or authoritative policy.
 
 Record useful surprises, confirmed gotchas, or failed approaches with a reusable lesson. No routine status chatter. Evidence can be a test name, a file plus commit, a CI run, or a reproducible command/result. Mark unverified claims as hypotheses. Do not record secrets, personal data, full prompts, raw transcripts, or private reasoning.
 

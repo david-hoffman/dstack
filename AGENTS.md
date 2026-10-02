@@ -1,6 +1,6 @@
 # Repository instructions: document authoring
 
-**Version 1.0 — Released.**
+Package version: [src/VERSION](src/VERSION). Release policy: [package versioning](src/README.md#package-versioning).
 
 This repository maintains the Agentic Software Delivery System's specification, prompts, skills, and templates. **The documents are the product. Do not implement, install, or run the system they describe.**
 
@@ -12,6 +12,10 @@ Use root [README.md](README.md) to navigate the documents; [src/README.md](src/R
 
 Do not add code, helpers, tests, CI workflows, dependencies, runtime infrastructure, or an implementation backlog. Use available tools to inspect links and diffs; do not create validation tooling or install a toolchain.
 
-Keep document metadata at **1.0 — Released** unless the owner explicitly changes it. Git records revisions. Preserve unrelated work. Do not commit, push, publish, or change remote settings without approval.
+Use one package version from `src/VERSION`; do not add independent document/skill versions or permanent "Released" banners. For changes under `src/`, update `src/CHANGELOG.md` under `Unreleased` and classify the complete change against the last stable release. Apply the highest required bump; a new obligation or changed authority is breaking even when called a clarification. Follow the development/release transitions in the package policy. Root-only authoring changes need no package bump.
+
+For version checks or release preparation, read the [maintainer release checklist](maintainer-skills/release-package/SKILL.md) as authoring guidance. It is a skill source outside automatic discovery, separate from the four inert delivery skills under `src/`; do not install or activate bundled delivery skills. Ordinary content edits need only the version/changelog checks, not a publication workflow.
+
+Preserve unrelated work. Do not commit, tag, push, publish, or change remote settings without explicit approval for those actions. Preparation is not publication approval. Never replace a published tag or assume a failed remote check means a version is unused. Report missing evidence and stop the affected release step; continue safe local authoring. The release checklist requires GitHub release immutability before publication, but writing these instructions does not enable it.
 
 Check local links, paths, metadata, and the resulting diff. Refresh an existing checksum manifest only when affected. Finish with the documentation changes, checks actually performed, and unresolved issues. A runnable system is not a deliverable of this repository.

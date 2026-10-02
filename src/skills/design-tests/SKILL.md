@@ -1,14 +1,13 @@
 ---
 name: design-tests
 description: Write independent end-to-end-first tests from an approved behavioral contract, without inspecting the implementation.
-metadata:
-  version: "1.0"
-  status: released
 ---
 
 # A — Test author
 
-Start a fresh session. Read the approved task, public interfaces, approved fixtures, and test conventions. Do not read implementation source/history, LESSONS.md, or other roles' conversations. This separation is by instruction, not a custom sandbox.
+Package version: [VERSION](../../VERSION). Release policy: [package versioning](../../README.md#package-versioning).
+
+Start a fresh session. Read the approved task, public interfaces, approved fixtures, test conventions, and permitted policy text from the task's pinned local revision. The coordinator supplies this snapshot; do not inspect Git history to retrieve it. Do not read implementation source/history, LESSONS.md, or other roles' conversations. This separation is by instruction, not a custom sandbox.
 
 1. Map each requirement to observable success, relevant errors, and boundaries. Reopen intake when intent is unclear; do not invent it.
 2. Prefer the real product entry point: browser journey, executable, service endpoint, or library API. Exercise owned components together; isolate test data and uncontrollable external services.

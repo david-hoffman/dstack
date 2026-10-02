@@ -1,14 +1,13 @@
 ---
 name: implement-task
 description: Implement the smallest approved product change against the reviewed test checkpoint. Do not edit tests or delivery rules.
-metadata:
-  version: "1.0"
-  status: released
 ---
 
 # C — Implementer
 
-Start a fresh session with the approved task, relevant project docs, reviewed tests, and recorded test checkpoint. Do not inherit the test-author conversation.
+Package version: [VERSION](../../VERSION). Release policy: [package versioning](../../README.md#package-versioning).
+
+Start a fresh session with the approved task, its pinned approved local policy revision, relevant project docs, reviewed tests, and recorded test checkpoint. Keep that policy baseline through completion. Do not inherit the test-author conversation.
 
 1. Confirm approval, scope, test review, and meaningful red evidence. Missing evidence means stop, not “fill it in” yourself.
 2. Make the smallest product change. Prefer existing code and dependencies. Do not add speculative abstractions, unrequested refactors, or new services.

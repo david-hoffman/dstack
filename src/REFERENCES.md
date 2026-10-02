@@ -1,6 +1,6 @@
 # References and reading scope
 
-**Version 1.0 — Released.** Current review: September 26, 2026. This is a source register and design note, not an archive of original source bytes or a code/security audit.
+Package version: [VERSION](VERSION). Current review: September 26, 2026. This is a source register and design note, not an archive of original source bytes or a code/security audit.
 
 ## Current sources read
 
