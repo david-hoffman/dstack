@@ -1,32 +1,64 @@
-# Agentic Software Delivery System — document authoring
+# dstack
 
-Package version: [src/VERSION](src/VERSION). Changes: [package changelog](src/CHANGELOG.md).
+dstack maintains the **Agentic Software Delivery System**: a documentation package for delivering software through owner-approved tasks, independent agent sessions, ordinary GitHub checks, and recorded lessons.
 
-This repository maintains the system's specification, prompts, skills, and templates. **The documents are the product.** Work here means editing and checking those documents. Do not implement, install, or run the system in this repository.
+**The documents are the product.** Setup and delivery take place in a separate target software repository. Do not implement or run the described system here; bundled prompts, skills, and templates are source documents to maintain.
 
-## Document map
+Package version: [src/VERSION](src/VERSION). Change history: [src/CHANGELOG.md](src/CHANGELOG.md).
 
-The canonical package stays under `src/`.
+## Start here
 
-| Documents | Purpose |
+| You want to… | Read |
 |---|---|
-| [Package guide](src/README.md) | Explain the system and its use in a separate target software repository. |
-| [Specification](src/DELIVERY-SYSTEM-SPEC.md) | Define the system's requirements. |
-| [Setup](src/SETUP-PROMPT.md), [intake](src/INTAKE-PROMPT.md), [doctor](src/DOCTOR-PROMPT.md) | Supply prompts for downstream setup, clarification, and maintenance. |
-| [Intake](src/skills/intake/SKILL.md), [design tests](src/skills/design-tests/SKILL.md), [implement task](src/skills/implement-task/SKILL.md), [review work](src/skills/review-work/SKILL.md) | Hold the four skill source documents; they are not activated here. |
-| [Project](src/templates/PROJECT.md), [task](src/templates/TASK.md), [repository instructions](src/templates/AGENTS.template.md) | Provide templates to adapt in the target repository. |
-| [GitHub setup](src/GITHUB-SETUP.md), [workflow examples](src/WORKFLOW-EXAMPLES.md) | Describe downstream configuration and use. |
-| [Lessons](src/LESSONS.md), [references](src/REFERENCES.md) | Provide the lesson-log starter and source register, including known reading gaps. |
-| [Versioning policy](src/README.md#package-versioning), [release checklist](maintainer-skills/release-package/SKILL.md) | Define package compatibility and guide maintainers through version checks and release preparation. |
+| Understand the system and downstream use | [Package guide](src/README.md) |
+| Read the authoritative requirements | [Delivery system specification](src/DELIVERY-SYSTEM-SPEC.md) |
+| See examples of setup, delivery, maintenance, and upgrades | [Workflow examples](src/WORKFLOW-EXAMPLES.md) |
+| Set up a separate target repository | [Setup prompt](src/SETUP-PROMPT.md) |
+| Clarify an architecture, feature, or bug request | [Intake prompt](src/INTAKE-PROMPT.md) |
+| Improve instructions from observed gaps | [Doctor prompt](src/DOCTOR-PROMPT.md) |
+| Configure downstream checks and branch protections | [GitHub setup](src/GITHUB-SETUP.md) |
+| Understand the sources and design choices | [References](src/REFERENCES.md) |
 
-## Contributing
+## Workflow at a glance
 
-Follow root [AGENTS.md](AGENTS.md) for work here. [CODEX-REPO-HANDOFF.md](CODEX-REPO-HANDOFF.md) records the organization scope. Bundled prompts, skills, examples, and templates are content to maintain, not contributor instructions to execute.
+Start with an owner-approved architecture. Then clarify and approve each task before delivery:
 
-Improve existing text and preserve the layout. Keep one package version and record package changes in the changelog. Check local links, paths, metadata, and the diff. Do not add code, tests, continuous integration (CI), dependencies, or runtime infrastructure. Do not commit or publish without approval.
+```text
+Approved task
+  → A: write tests
+  → B: review tests
+  → verify baseline results and save the test checkpoint
+  → C: implement
+  → automated checks
+  → D: review the candidate
+  → normal GitHub merge
+```
 
-For a release check, ask: "Check the package version using `maintainer-skills/release-package/SKILL.md`." For a reviewable candidate, ask: "Prepare the next package release using that checklist." Checking writes nothing; preparation edits documentation but does not commit, tag, push, or publish. The maintainer skill remains a source document outside automatic skill discovery and is not a fifth downstream delivery skill.
+A–D are fresh sessions. Tests exercise observable behavior through the product's real entry points. GitHub continuous integration (CI) runs the configured checks. Role restrictions are instructions, not technical access controls.
 
-The checklist makes missing evidence explicit. It is not technical enforcement. Before the first publication, an authorized owner must enable GitHub's [release immutability](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/establish-provenance-and-integrity/prevent-release-changes) in repository Settings → Releases. Publication must verify the setting and the resulting release; do not infer protection from this README.
+Useful discoveries go into a lessons log. The doctor workflow turns evidenced gaps into focused instruction changes for owner review. The [specification](src/DELIVERY-SYSTEM-SPEC.md) defines the full workflow, approval boundaries, and verification requirements.
 
-For use elsewhere, start with the package guide and setup prompt. Their implementation and demonstration requirements apply to the target repository, not to authoring this package.
+## Package contents
+
+Everything under [`src/`](src/) belongs to one versioned document package. It includes the guides above, four skills, and templates for the target repository.
+
+| Skill | Purpose |
+|---|---|
+| [intake](src/skills/intake/SKILL.md) | Clarify architecture and tasks; record owner approval. |
+| [design-tests](src/skills/design-tests/SKILL.md) | Write tests from the approved behavioral contract (A). |
+| [implement-task](src/skills/implement-task/SKILL.md) | Implement against the reviewed tests (C). |
+| [review-work](src/skills/review-work/SKILL.md) | Review tests (B), review candidates (D), or maintain instructions in doctor mode. |
+
+The templates cover the [project record](src/templates/PROJECT.md), [task record](src/templates/TASK.md), and [target repository instructions](src/templates/AGENTS.template.md). [LESSONS.md](src/LESSONS.md) provides the learning-log format.
+
+Use the [package guide](src/README.md) when adopting these documents. Setup preserves existing product documentation and adapts paths and instructions to the target repository.
+
+## Maintaining this repository
+
+Follow [AGENTS.md](AGENTS.md) for document authoring. Keep the specification and supporting prompts, skills, and templates consistent. Improve existing text before adding files, and preserve unrelated work.
+
+- Keep package assets under `src/`; do not duplicate them in the repository root.
+- Check local links, paths, metadata, and the resulting diff. Do not add runtime code, tests, dependencies, or validation tooling here.
+- For changes under `src/`, update the package changelog and apply the [package versioning policy](src/README.md#package-versioning). Root-only authoring changes need no package bump.
+- Use the [maintainer release checklist](.agents/release-package/SKILL.md) for version checks and release preparation. It is separate from the four downstream skills.
+- Commit, tag, push, publish, or change remote settings only with explicit approval.
