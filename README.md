@@ -1,64 +1,38 @@
 # dstack
 
-dstack maintains the **Agentic Software Delivery System**: a documentation package for delivering software through owner-approved tasks, independent agent sessions, ordinary GitHub checks, and recorded lessons.
+dstack is a workflow for building software with coding agents. You decide what to build and approve the scope. Separate agent sessions write tests, implement the change, and review the result.
 
-**The documents are the product.** Setup and delivery take place in a separate target software repository. Do not implement or run the described system here; bundled prompts, skills, and templates are source documents to maintain.
+The workflow starts by agreeing on observable behavior. Tests are written and reviewed against that agreement before implementation begins, so the implementation is judged against expectations established independently of its code.
 
-Package version: [src/VERSION](src/VERSION). Change history: [src/CHANGELOG.md](src/CHANGELOG.md).
+This repository packages the **Agentic Software Delivery System** as a specification, prompts, four agent skills, and templates. A skill is a reusable set of instructions for a particular job. You adapt the package to a new or existing software project using your coding tool, the project's test tools, Git, and GitHub Actions.
 
-## Start here
+## How a change moves through dstack
 
-| You want to… | Read |
+Suppose you ask for a customer-data export in an existing application. The request moves through four stages:
+
+1. **Agree on the behavior.** An intake conversation establishes who can export which records, which fields belong in the file, and what should happen on failure. You approve the task, including its scope, acceptance criteria, and budget.
+2. **Write and review the tests.** A test author works from the approved requirements and public interfaces without inspecting the implementation. A second agent reviews those tests. For the export, they check the downloaded data and verify that a user cannot export another organization's records. New-feature tests must fail for the intended reason before implementation starts; the reviewed tests are saved in a Git commit.
+3. **Implement the change.** A fresh agent builds the feature against the reviewed tests. If it finds a problem in the tests, that problem goes back for test review instead of being silently changed to fit the code.
+4. **Check and review the result.** Automated checks run in GitHub Actions. A fresh reviewer examines the change and the evidence that it works. You receive a summary of the outcome and decide whether to merge.
+
+You provide the product decisions and approvals; agents do the testing, implementation, and technical review. The [workflow examples](src/WORKFLOW-EXAMPLES.md) also cover starting a new project and upgrading an existing setup.
+
+Useful discoveries are recorded in a [lessons log](src/LESSONS.md). When experience reveals a gap in the instructions, the [doctor workflow](src/DOCTOR-PROMPT.md) proposes a focused revision for your review.
+
+## Use it in your project
+
+1. Read the [package guide](src/README.md) for the full process and your role in it.
+2. Open your software project's repository in your coding tool. Supply the complete [`src/` package](src/) and the [setup prompt](src/SETUP-PROMPT.md). Setup inspects the project, reuses an approved architecture or helps you define one, and presents a plan for adapting the workflow to your repository.
+3. Once setup is complete, use the [intake prompt](src/INTAKE-PROMPT.md) to describe your first feature or bug fix.
+
+## Reference
+
+| Document | What it covers |
 |---|---|
-| Understand the system and downstream use | [Package guide](src/README.md) |
-| Read the authoritative requirements | [Delivery system specification](src/DELIVERY-SYSTEM-SPEC.md) |
-| See examples of setup, delivery, maintenance, and upgrades | [Workflow examples](src/WORKFLOW-EXAMPLES.md) |
-| Set up a separate target repository | [Setup prompt](src/SETUP-PROMPT.md) |
-| Clarify an architecture, feature, or bug request | [Intake prompt](src/INTAKE-PROMPT.md) |
-| Improve instructions from observed gaps | [Doctor prompt](src/DOCTOR-PROMPT.md) |
-| Configure downstream checks and branch protections | [GitHub setup](src/GITHUB-SETUP.md) |
-| Understand the sources and design choices | [References](src/REFERENCES.md) |
+| [Specification](src/DELIVERY-SYSTEM-SPEC.md) | The complete workflow, responsibilities, approvals, and verification requirements. |
+| [Agent skills](src/skills/) | Instructions for intake, test writing, implementation, and review. |
+| [Templates](src/templates/) | Starting points for the project record, task record, and repository instructions. |
+| [GitHub setup](src/GITHUB-SETUP.md) | Automated checks and branch protection configuration. |
+| [References](src/REFERENCES.md) | Sources, adopted ideas, and design decisions. |
 
-## Workflow at a glance
-
-Start with an owner-approved architecture. Then clarify and approve each task before delivery:
-
-```text
-Approved task
-  → A: write tests
-  → B: review tests
-  → verify baseline results and save the test checkpoint
-  → C: implement
-  → automated checks
-  → D: review the candidate
-  → normal GitHub merge
-```
-
-A–D are fresh sessions. Tests exercise observable behavior through the product's real entry points. GitHub continuous integration (CI) runs the configured checks. Role restrictions are instructions, not technical access controls.
-
-Useful discoveries go into a lessons log. The doctor workflow turns evidenced gaps into focused instruction changes for owner review. The [specification](src/DELIVERY-SYSTEM-SPEC.md) defines the full workflow, approval boundaries, and verification requirements.
-
-## Package contents
-
-Everything under [`src/`](src/) belongs to one versioned document package. It includes the guides above, four skills, and templates for the target repository.
-
-| Skill | Purpose |
-|---|---|
-| [intake](src/skills/intake/SKILL.md) | Clarify architecture and tasks; record owner approval. |
-| [design-tests](src/skills/design-tests/SKILL.md) | Write tests from the approved behavioral contract (A). |
-| [implement-task](src/skills/implement-task/SKILL.md) | Implement against the reviewed tests (C). |
-| [review-work](src/skills/review-work/SKILL.md) | Review tests (B), review candidates (D), or maintain instructions in doctor mode. |
-
-The templates cover the [project record](src/templates/PROJECT.md), [task record](src/templates/TASK.md), and [target repository instructions](src/templates/AGENTS.template.md). [LESSONS.md](src/LESSONS.md) provides the learning-log format.
-
-Use the [package guide](src/README.md) when adopting these documents. Setup preserves existing product documentation and adapts paths and instructions to the target repository.
-
-## Maintaining this repository
-
-Follow [AGENTS.md](AGENTS.md) for document authoring. Keep the specification and supporting prompts, skills, and templates consistent. Improve existing text before adding files, and preserve unrelated work.
-
-- Keep package assets under `src/`; do not duplicate them in the repository root.
-- Check local links, paths, metadata, and the resulting diff. Do not add runtime code, tests, dependencies, or validation tooling here.
-- For changes under `src/`, update the package changelog and apply the [package versioning policy](src/README.md#package-versioning). Root-only authoring changes need no package bump.
-- Use the [maintainer release checklist](.agents/release-package/SKILL.md) for version checks and release preparation. It is separate from the four downstream skills.
-- Commit, tag, push, publish, or change remote settings only with explicit approval.
+The package has one [version](src/VERSION) and [changelog](src/CHANGELOG.md). To contribute to these documents, see [AGENTS.md](AGENTS.md); for releases, see the [versioning policy](src/README.md#package-versioning) and [maintainer checklist](.agents/release-package/SKILL.md).
