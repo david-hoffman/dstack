@@ -11,8 +11,10 @@ is the format guide, installed as LESSONS/README.md, not an entry log. Search na
 do not recrawl sources, read every lesson routinely, or replay sessions.
 
 Classify findings: product bug, test/oracle defect, workflow/environment problem, or
-policy/instruction gap. Verify evidence before generalizing. A green rerun does not
-prove an earlier failure harmless. Unknown controls/metering/results remain unknown;
+policy/instruction gap. Verify evidence before generalizing. Failure to follow an existing
+rule does not automatically need another rule. Exploration notes cover only visible
+threads; confirmed friction does not prove its cause or a proposed change's benefit.
+A green rerun does not prove an earlier failure harmless. Unknown controls/metering/results remain unknown;
 hypotheses remain hypotheses. A known-good path is reusable only for recorded inputs
 and current health. Prefer cheap bounded prerequisite checks before expensive phases.
 

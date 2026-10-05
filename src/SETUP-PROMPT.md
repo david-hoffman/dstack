@@ -17,10 +17,12 @@ permission enforcement, evidence database, or autonomous repair loop. Role/file 
 and append-only lessons are instructions; never claim technical isolation from them.
 
 Start read-only. Preserve existing product docs and sound tooling. Reuse approved
-architecture or route unresolved material decisions to architecture intake. Existing
-code is evidence, not automatically intended behavior. An empty repo needs an approved
-minimal project record before stack selection. Repeated setup completes approved gaps;
-it does not overwrite working choices or implement product features.
+architecture or route unresolved delivery decisions to architecture intake. Offer intake
+exploration mode when I want to experiment first; architecture can remain pending.
+Existing code/prototypes are evidence, not automatically intended behavior. Delivery
+needs an approved minimal project record before stack selection; exploration may try
+provisional choices. Repeated setup completes approved gaps; it does not overwrite
+working choices or implement product features.
 
 Show a small setup plan with scope/checks/budget and obtain approval before applying it.
 Install one canonical specification and four skills at supported harness paths, preserve
@@ -52,6 +54,28 @@ requires my explicit approval of the identified patch and fresh independent poli
 it is not mechanical editing and requires no fabricated product-red evidence.
 Record an approved local policy commit before delivery; each task pins that existing
 commit, never its own eventual hash. Supply A/B only permitted text from that revision.
+
+Exploration is a separate entry through the existing intake skill, not delivery-worker
+mode or a fifth skill. The request to experiment permits prototype code/tests without
+architecture/task approval or A/B/C/D first; keep repository permissions, privacy,
+unrelated work, spending limits, and commit/push/merge/release authority. It grants no
+policy change or weakening of checks. Keep a compact task-record handoff with stable
+exploration ID, branch, base/latest full commits when available, uncommitted work,
+visible conversation/artifact references, experiment, reproducible results, known
+defects, and next step. No commit is required merely to begin. An optional participating
+observer appends useful confirmed observations separately from hypotheses at checkpoints
+under the actual canonical lesson home; no extra agent or tracing service is required.
+It maintains notes/handoffs, not approvals, policy, direction, or readiness certification.
+
+A request to promote starts fresh architecture/task intake. Pin the reference prototype
+at a full commit before approving delivery; distinguish desired behavior from accidental
+behavior, defects, and implementation suggestions. Obtain applicable architecture/task,
+route, and budget approvals under normal rules. Choose new implementation from the
+integration baseline or hardening/refactoring the prototype. Give high-risk A/B only
+approved public behavior and permitted policy, without prototype internals, exploration
+transcripts, or lesson entries; C may use the pinned prototype. Expected results need
+independent justification. Later tests are supplemental/regression evidence and may pass
+initially; do not force a rewrite or manufacture red to claim original test-first work.
 
 Record each task's tier/reason, route, edit scope, checks, per-role model/effort choices,
 gate mode, escalation triggers, budget, and allowances. Mechanical non-policy work uses
@@ -96,6 +120,13 @@ version inputs/resolved version when Git determines artifacts; tree equality alo
 cannot identify artifacts across head/test-merge/actual merge identities. Run cheap
 interpreter/install/import/isolated-environment and actual reviewer launch/auth/connectivity
 prerequisites before expensive dependent phases; stop and diagnose failed prerequisites.
+Check real native commands and required platforms for compatibility. Test review checks
+expectation sources, valid alternatives, units/tolerances, plausible wrong behavior, and
+actual assertion execution. Distinguish environment/fixture, test, product, and unresolved
+requirement failures before authorized repair. For verification/evidence helpers writing
+logs or reports, check the actual destination leaf/ancestors and protected targets
+immediately before each write, including after a subprocess that can redirect paths.
+An initial path check or later damage report does not establish safe writing.
 Use bounded native terminal waits, not repeated unchanged polling or an automatic loop.
 Profile slow tests before changes; immutable build reuse and clean installs must retain
 every claimed independence/packaging/negative-control proof. Helpers/shards require their
@@ -130,7 +161,10 @@ A/B, meaningful baseline/test checkpoint, C, exact green local/CI checks, and D;
 invented product-red evidence for policy docs. Do not rerun completed owner data merely
 for benchmarking. Record actual protections, launches, findings, and gaps; do not
 fabricate independent sessions or claim prompt restrictions were mechanically verified.
-Demonstrate a lesson append and independently reviewed doctor patch where supported.
+Exercise exploration handoff/promotion on a relevant example and state whether it ran
+or was walked through. Demonstrate a lesson append and independently reviewed doctor
+patch where supported by real evidence; zero useful lessons and a documented no-gap
+doctor outcome are valid.
 
 Keep in-flight tasks on original rules unless explicitly migrated without resetting
 allowances. Suspend a lighter route on missed material obligations, source exposure,

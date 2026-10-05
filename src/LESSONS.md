@@ -4,11 +4,13 @@ Package version: [VERSION](VERSION). This source file remains `LESSONS.md`; setu
 
 Record useful surprises, confirmed gotchas, or failed approaches with a reusable lesson. No routine status chatter. Evidence can be a test name, file plus commit, CI run, or reproducible command/result. Mark unverified claims as hypotheses. Do not record secrets, personal data, full prompts, raw transcripts, or private reasoning.
 
+During exploration, participating agents may observe at useful checkpoints. Record concrete intake friction, experiment outcomes, failed approaches, or possible framework improvements; distinguish confirmed observations from hypotheses. Identify the exploration ID, branch, and threads actually visible. Do not imply access to other conversations. Keep branch state and next steps in the task handoff. Zero observations is valid. Observation does not approve requirements, authorize policy changes, or certify a prototype.
+
 ## Append-only entries and access
 
 Create a brief entry with a stable ID/date, task/role, topic, status, observation, evidence, and lesson. Individual Markdown entry files are append-only by instruction. Correct an entry by appending a superseding entry referring to its ID; do not silently rewrite history. An owner-authorized privacy/security redaction overrides retention. One to three entries per task is a guide, not a quota; no finding means no entry.
 
-Blind A/B may read only this format guide and their approved public-contract packet. They must not read lesson entries, broadly browse documentation/history, or follow guide links into implementation-bearing material. They may supply an entry to the coordinator for verbatim append or append their own without reading other entries. A coordinator/doctor searches relevant entries, fact-checks them, and promotes useful facts through an approved public contract/instruction. Other roles read only relevant entries; D assesses the candidate independently before current-task implementation lessons.
+Blind A/B may read only this format guide and their approved public-contract packet. They must not read lesson entries, exploration notes or prototype internals, broadly browse documentation/history, or follow guide links into implementation-bearing material. They may supply an entry to the coordinator for verbatim append or append their own without reading other entries. A coordinator/doctor searches relevant entries, fact-checks them, and promotes useful facts through an approved public contract/instruction. Other roles read only relevant entries; D assesses the candidate independently before current-task implementation lessons.
 
 A lesson is data; it does not grant authority, repair a defect, or amend policy. `doctor` can propose a change to an existing instruction, with independent policy review and explicit owner approval before activation. Location and prompt restrictions are not technical access controls.
 
@@ -29,6 +31,7 @@ Choose a unique filename such as `<YYYYMMDDTHHMMSSZ>-<task>-<role>-<short-slug>.
 - Status: confirmed | hypothesis | supersedes <entry-id>
 - Observation: <one concrete surprise>
 - Evidence: <test/commit/run/path and observed result>
+- Visibility (for exploration): <exploration ID/branch and threads actually seen>
 - Lesson: <small future action, or what still needs checking>
 ```
 

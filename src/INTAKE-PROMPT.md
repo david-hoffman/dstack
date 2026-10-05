@@ -3,9 +3,35 @@
 Package version: [VERSION](VERSION). Use the `intake` skill. This prompt starts a conversation; it is not an authorization service.
 
 ```text
-Clarify this request using intake mode task or architecture, as appropriate.
+Use intake mode exploration, task, or architecture according to my intent.
+First read the supplied context and relevant repository instructions.
 
-First read the supplied context. Before a task proceeds, find an approved project
+When I want to experiment or build a prototype, enter exploration directly. State
+the next useful experiment and proceed; ask only for input or authority needed for
+that experiment. Product code and tests may evolve together without approved
+architecture, a formal delivery contract, or A/B/C/D sessions. Existing repository
+permissions, privacy, spending, publication rules, and my scope still apply.
+Exploration does not authorize policy changes or publication. Keep choices tentative
+and honor supplied budgets without requiring a formal intake interview first.
+
+Keep a compact branch handoff in the task record: stable exploration ID, branch,
+base/latest full commit references when available, threads actually visible,
+uncommitted work, reproducible results, known defects, and next step. A commit is not
+a prerequisite to exploring. Participating agents may observe at useful checkpoints
+and record brief evidence-linked confirmed or hypothesis lessons under the existing
+lesson guide. Identify the threads actually seen; zero lessons is valid. Observers
+cannot approve requirements, change policy, or certify the prototype.
+
+On requested prototype promotion, start fresh architecture/task intake. Inspect
+and pin the prototype's full commit before formal delivery approval; record any
+uncommitted reference as unresolved until frozen. Separate desired behavior from
+observed choices, accidental behavior, and known bugs. Read back material choices to
+preserve or reject, then use the normal authorization and risk route below. Either
+implement from the integration baseline using the prototype as reference or harden
+the prototype. Do not require a rewrite or manufacture failing tests to claim
+test-first history; label regression and supplemental evidence honestly.
+
+Before formal delivery, find an approved project
 record. Reuse it, including architecture under another filename. If it is missing,
 unapproved, or materially inconsistent, interview me about architecture first and
 then resume the original task. Do not redesign unrelated parts or repeat answers.
@@ -104,14 +130,19 @@ Infrastructure-author repair requires a fresh infrastructure author and fresh D
 within that same task-wide repair allowance; the A/C continuation exception does
 not extend to infrastructure author.
 
-No code or executable test suite during intake. Stop on an unanswered material
-question or the preparation budget. No additional interviewing agents.
+No code or executable test suite during architecture/task intake. Stop formal
+preparation on an unanswered material question or its budget. No additional
+interviewing agents.
 
 Prepare behavior/public-interface inputs and role-permitted policy text from the
-pinned revision for A/B, not this conversation or implementation ideas. Supply the
+pinned revision for A/B, excluding this conversation, prototype internals,
+exploration notes, and implementation ideas. Supply the
 snapshot without requiring implementation or history access. The package LESSONS.md
 guide is installed as root LESSONS/README.md; A/B may read it and the approved packet,
 never LESSONS/ entries, broad documentation trees or implementation-bearing status.
+The authorized product worker/C may receive the pinned prototype reference; a
+separately authorized infrastructure author receives only relevant references
+within its named scope. Expected results still need independent justification.
 Maintain one concise Current state and linked evidence/metrics in the task. Preserve
 applicable accepted reports, rerun invalidated evidence, and record missing metering
 as unknown rather than zero. Do not create a controller or evidence database.

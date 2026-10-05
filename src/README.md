@@ -2,13 +2,13 @@
 
 Package version: [VERSION](VERSION). Release history: [CHANGELOG.md](CHANGELOG.md). This guide describes using the package in a separate target software repository. This repository maintains the documents; do not run setup or delivery here. The package is not installed software.
 
-> You decide what to build. Choose the approved route by risk, keep independent review where required, verify the exact candidate, and record useful lessons.
+> Explore when you are unsure what to build. Choose the approved delivery route by risk, keep independent review where required, verify the exact candidate, and record useful lessons.
 
 ## The whole scheme
 
 **One monorepo, four skills, ordinary CI, and a learning log. No custom delivery platform.**
 
-Reuse an approved architecture. If there is none, intake resolves your goals and the material decisions in a small project record. Existing code describes what happens, not automatically what you intend. Architecture approval does not approve a feature.
+For delivery, reuse an approved architecture. If there is none, intake resolves your goals and the material decisions in a small project record. Existing code describes what happens, not automatically what you intend. Architecture approval does not approve a feature. Exploration can defer that record while you experiment.
 
 Record each task's scope, risk tier and reason, role route, authorized files/checks, per-role model/effort choice, gate mode, budget, escalation triggers, and allowances before execution. Risk follows the hardest acceptance decision, not line count.
 
@@ -24,6 +24,18 @@ Authority/permission promotion stops the bounded worker until the owner explicit
 
 Policy editing uses a documentation path: explicit owner approval of the identified patch and fresh independent policy review before activation. It cannot classify itself as mechanical. It does not require fabricated product-red evidence or scientific tests. Keep the specification and affected instructions consistent before using changed rules.
 
+## Explore, then promote
+
+Use `intake` mode `exploration` when you want to experiment before choosing an outcome. The engineer and agent can write and revise prototype code/tests without approved architecture, a delivery contract, or the delivery-role sequence. Ask only questions needed for the next useful experiment. Keep repository permissions, unrelated work, privacy, spending limits, and commit/push/merge/release authority; exploration cannot change policy or weaken required checks.
+
+Keep one small handoff in the [task record](templates/TASK.md): stable exploration ID, branch, base/latest full commits when available, uncommitted work, conversation references and actual visibility, experiment, reproducible results, known defects, and next step. This carries the branch session across conversations without pretending a moving branch name identifies fixed source. No commit is required just to start.
+
+Observation is an optional responsibility of participating agents. At useful checkpoints, append confirmed observations separately from hypotheses under the canonical lessons home, with evidence and a possible improvement. State which conversations/artifacts were actually visible. The observer can maintain notes and the handoff but cannot approve, change policy, redirect work, or certify the prototype. No extra skill, agent, or tracing service is required. Zero lessons is valid; observation time counts toward spending.
+
+A delivery request starts fresh architecture/task intake from a prototype pinned at a full commit. Separate desired behavior, accidental behavior, known defects, and implementation suggestions, then obtain the applicable delivery approvals. Choose new implementation from the integration baseline or hardening/refactoring the prototype. Tests written after it are supplemental/regression evidence; do not claim they preceded it or force a rewrite to manufacture a failing baseline.
+
+For high risk, A/B see the approved public contract and permitted policy without prototype internals, exploration transcripts, or lesson entries. Independently justify expectations. C may receive the pinned prototype as a reference. Normal ownership, verification, independent review, and merge/release boundaries apply after promotion.
+
 ## What you do
 
 Describe the outcome and answer consequential questions. Approve the architecture, task scope, budget, material changes, and final merge/release actions. For the first two tiers, a complete explicit instruction may itself authorize the named scope; intake records that instruction and sends a concise read-back without requiring a redundant approval. High-risk contracts and policy patches retain explicit proposal approval. Silence never approves missing decisions or a new allowance.
@@ -37,6 +49,8 @@ Independent correction review may retain unaffected accepted evidence. A supplie
 ## Verification and evidence
 
 The default submission gate is full canonical local verification of the exact candidate plus every required CI platform. Keep 100% measured statement and branch coverage globally and per package on each required platform, including never-imported owned runtime and applicable subprocesses. Disclose exclusions and unsupported measurement. Complete coverage cannot prove complete behavior.
+
+Review expectation sources, valid alternatives, units/tolerances, plausible wrong behavior, and actual assertion execution. Use real native commands and required-platform runs for compatibility claims. Test changes during operations, including output paths redirected after initial validation. Verification/evidence helpers writing logs or reports must protect actual destinations immediately before writes. A broken fixture does not prove a product rejected its intended input.
 
 Use one concise Current state and ordinary evidence receipts: candidate/tree and test identities, canonical commands, dependency lock, relevant environment/platform/tools, integration base, exact results/coverage, and unresolved limits. Fingerprint material ignored/untracked inputs separately. Git-derived versions also need commit/tag/dirty/build inputs and the resolved artifact version; identical source trees at different commits can build differently. Head, base, environment, dependencies, checks, or version changes invalidate affected claims. Reuse evidence only while its inputs and meaning remain applicable.
 
@@ -56,6 +70,8 @@ Existing `LESSONS.md`, `docs/LESSONS/`, or another layout stays in place until a
 
 Run `delivery doctor` for an evidenced process gap. It classifies product, test, workflow, and policy defects; it edits the smallest affected instructions on a documentation branch. Independent policy review and your explicit patch approval precede activation. Git records revisions. Doctor cannot repair a feature by weakening its rules.
 
+No evidenced gap means no policy edit. Record a no-gap result honestly; neither doctor nor a demonstration needs to invent a lesson or correction.
+
 Roll out policy changes through one coherent reviewed patch, aligned generated/installed instructions, then separately approved pilots for a documentation task, a conventional bounded repair, an infrastructure task, and high-risk public/synthetic work. Agree acceptance criteria and budget before starting; do not rerun completed owner data for a benchmark. Keep in-flight tasks on their original policy unless migration is explicitly approved; retain prior attempts and spending. Suspend an affected lighter route on a missed material obligation, exposure, false acceptance, or unresolved gap. Wider adoption requires comparison and owner approval; any ten-task follow-up is separately budgeted and does not establish defect-rate equivalence.
 
 ## Start here
@@ -64,10 +80,10 @@ Roll out policy changes through one coherent reviewed patch, aligned generated/i
 |---|---|
 | [SETUP-PROMPT.md](SETUP-PROMPT.md) | Supply this prompt and the package to set up a separate target repository. |
 | [DELIVERY-SYSTEM-SPEC.md](DELIVERY-SYSTEM-SPEC.md) | The authoritative delivery requirements. |
-| [INTAKE-PROMPT.md](INTAKE-PROMPT.md) | Clarify architecture and tasks; approve risk and execution scope. |
+| [INTAKE-PROMPT.md](INTAKE-PROMPT.md) | Explore ideas, promote prototypes, and clarify architecture/tasks with risk and execution scope. |
 | [DOCTOR-PROMPT.md](DOCTOR-PROMPT.md) | Propose evidenced policy/instruction corrections. |
 | [GITHUB-SETUP.md](GITHUB-SETUP.md) | Configure ordinary CI and native protections; verify pilot prerequisites. |
-| [WORKFLOW-EXAMPLES.md](WORKFLOW-EXAMPLES.md) | Compare routes, corrections, pilot rollout, and upgrades. |
+| [WORKFLOW-EXAMPLES.md](WORKFLOW-EXAMPLES.md) | Compare exploration/promotion, routes, corrections, pilot rollout, and upgrades. |
 
 The [skills directory](skills/) contains four procedures. The [project](templates/PROJECT.md), [task](templates/TASK.md), and [repository-instructions](templates/AGENTS.template.md) templates are starters. Setup adapts `AGENTS.template.md` into target `AGENTS.md` and records source/installed mappings. [REFERENCES.md](REFERENCES.md) explains sources and deliberate omissions.
 
