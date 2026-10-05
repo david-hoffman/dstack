@@ -1,10 +1,10 @@
 # References and reading scope
 
-Package version: [VERSION](VERSION). Current review: September 26, 2026. This is a source register and design note, not an archive of original source bytes or a code/security audit.
+Package version: [VERSION](VERSION). Source register updated: October 5, 2026. Initial design review: September 26, 2026. This is a source register and design note, not an archive of original source bytes or a substitute for downstream code/security review.
 
-## Current sources read
+## Sources read for the initial design
 
-The complete pstack README, the five selected skill texts below, and the complete claude-trace README were read. GitHub protected-branch and Playwright best-practices substantive text was also read. Images and videos were not needed for the adopted textual guidance and are not claimed inspected. Source links track `main` or current documentation; no historical source snapshot is claimed.
+The complete pstack README, the five selected skill texts below, and the complete claude-trace README were read for the initial design. GitHub protected-branch and Playwright best-practices substantive text was also read. Images and videos were not needed for the adopted textual guidance and are not claimed inspected. These links track `main` or current documentation; no historical snapshot is claimed for R1–R9, and this update does not claim to have reread them.
 
 ### R1 — pstack overview
 
@@ -59,6 +59,16 @@ For browser projects, adapt user-visible behavior, isolated data/state, resilien
 [README](https://github.com/badlogic/lemmy/blob/main/apps/claude-trace/README.md).
 
 The documented tool records Claude Code interactions and raw API data with a viewer; its optional indexing uses Claude calls and additional tokens. This is a diagnostic transcript tool, not a small reusable-lesson record. Do not install it by default. Native harness logs can be consulted for a specific problem when permitted; they stay out of the shared lesson file and blind-role inputs. Implementation, runtime compatibility, and security were not audited or executed.
+
+## Downstream observations reviewed October 5, 2026
+
+### R10 — simrecon and dphtools experience
+
+The review read [simrecon PR #3](https://github.com/david-hoffman/simrecon/pull/3) at commit `e8c58b1103a4c1c8ee42e728e1987c63c1574da2` and the dphtools spectrum-fitting branch at commit `514f16ae9eedcfb51d7dd90da0099c1f0ea1ceb8`, including all 22 [simrecon lessons](https://github.com/david-hoffman/simrecon/tree/e8c58b1103a4c1c8ee42e728e1987c63c1574da2/LESSONS) and 57 [dphtools lessons](https://github.com/david-hoffman/dphtools/tree/514f16ae9eedcfb51d7dd90da0099c1f0ea1ceb8/LESSONS). Newer local spectrum-fitting work was outside that review. The pinned [spectrum-fitting contract](https://github.com/david-hoffman/dphtools/blob/514f16ae9eedcfb51d7dd90da0099c1f0ea1ceb8/docs/tasks/SPECTRUM-FITTING-001-contract.md) was intake material, not an implemented fitting feature.
+
+These observations support delivery routes based on uncertainty and consequences, approval of coherent outcomes rather than scenario-count quotas, stronger review of test expectations and actual assertion execution, current-environment/platform checks, preserved handoffs and repair accounting, and honest total-cost comparisons. Output safety needs checks at the actual write when a subprocess can change the destination. Reused verification must account for external inputs before being treated as current evidence.
+
+Adopt the process lessons into the specification, not native scientific contracts or custom verification machinery. Recorded lessons are evidence to assess, not new authority by themselves. The review did not execute either delivery system, run their tests, or reproduce historical lesson experiments. Exploration and prototype promotion are a proposed response to the owner's workflow request; their efficiency remains to be evaluated in downstream use.
 
 ## Previously discussed sources retained for posterity
 

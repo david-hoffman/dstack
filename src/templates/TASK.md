@@ -2,7 +2,21 @@
 
 Package version: [VERSION](../VERSION). Release policy: [package versioning](../README.md#package-versioning).
 
-Task status: draft / approved / blocked / done. This records task progress, not a package release or technical enforcement.
+Task status: exploring / promoted / draft / approved / blocked / done. This records progress, not a package release, approval, or technical enforcement. `Promoted` records a prototype handoff; it does not authorize delivery. Use the exploration section while experimenting; the delivery baseline, contract, and authorized execution sections apply to formal delivery.
+
+## Exploration handoff (when applicable)
+
+- Stable exploration ID and branch:
+- Purpose, requested scope, boundaries, and supplied budget:
+- Base/latest committed references (full target Git commits when available):
+- Threads actually visible to the recording agent:
+- Uncommitted work and how to reproduce the latest result:
+- Useful results, known defects, unresolved choices, and next experiment:
+- Promotion reference (full prototype commit, or unresolved uncommitted reference):
+- Desired behavior and observed choices, accidental behavior, or bugs to preserve/reject:
+- Promotion approach: implementation from the integration baseline / prototype hardening:
+
+Update this compact handoff at useful checkpoints across threads. The branch is the exploration session boundary; its moving name is not a fixed reference. No commit, approved architecture, or formal contract is required to start exploring. Keep supplied boundaries and budgets. Freeze the prototype reference before formal delivery approval; then use normal intake and authorization. Do not invent approval or test-first history. Keep useful learning under the existing lesson guide, not a transcript here.
 
 ## Delivery policy baseline
 
@@ -10,7 +24,7 @@ Task status: draft / approved / blocked / done. This records task progress, not 
 - Existing committed, owner-approved local policy revision (full target Git commit):
 - Adopted policy paths governed by that revision:
 
-Pin this revision before task approval; do not use this task's own eventual commit hash. It governs this task through completion. A/B receive only role-permitted policy text from this snapshot, without implementation or history access.
+Pin this revision before formal task approval; do not use this task's own eventual commit hash. It governs this task through completion. A/B receive only role-permitted policy text from this snapshot, without prototype internals, exploration notes, implementation, or history access.
 
 For a policy-change task, distinguish the governing baseline from the proposed patch. Fresh independent policy review and explicit owner approval of that identified patch are required before downstream activation. An approved migration for an in-flight task must identify the changed rules and preserve earlier attempts, spending, and allowances.
 
@@ -25,6 +39,7 @@ For a policy-change task, distinguish the governing baseline from the proposed p
 - S1: <distinct approved decision and observable outcome; requirement IDs>
   - Optional coverage examples: <equivalent values and the accepted decision they exercise>
 - Unresolved material decisions:
+- For prototype promotion: frozen prototype commit and approved behavior/choices to preserve or reject:
 
 Start with roughly five behavioral scenarios as a planning heuristic. A distinct rejection, interpretation, output guarantee, or boundary outcome is a separate scenario. Approve a larger coherent contract once when needed; equivalent data within accepted behavior and budget need no new approval. Neither parameterized-test counts nor branch counts determine contract size. Do not combine unrelated obligations to meet the heuristic.
 
@@ -63,7 +78,7 @@ Approval authorizes the recorded routine role transitions, checks, in-scope corr
 - Next role/action:
 - Remaining budget, review-window rounds, and task-wide repair allowance:
 
-Maintain this one concise state; link earlier accepted reports instead of copying them. A/B receive a separate approved public-contract packet, never implementation-bearing status.
+Maintain this one concise state; link earlier accepted reports instead of copying them. A/B receive a separate approved public-contract packet, never prototype internals, exploration notes, or implementation-bearing status.
 
 ## Evidence and metrics
 
@@ -73,6 +88,6 @@ Maintain this one concise state; link earlier accepted reports instead of copyin
 - Per-role model/effort, responses, input/cached/output tokens, available monetary cost, elapsed/owner-wait minutes, and check wall time, including calibration, failed launches, and rework:
 - Task critical-path timestamps/dependencies, time to PR/readiness/merge, repeated checks, scenarios versus coverage examples, review windows/rounds, repairs, found/missed defects, source exposure, and owner effort:
 
-Reuse evidence only while all relevant inputs remain unchanged and no new failure challenges it. Run cheap bounded environment/install/reviewer-launch prerequisites before expensive dependent checks; stop and diagnose a failed prerequisite. Environment or generated-version changes can invalidate evidence at an unchanged source tree. Missing metering is **unknown**, not zero; avoid double-counting overlapping elapsed time, cumulative counters, or child sessions. No full conversations or implementation rationale for blind roles.
+Reuse evidence only while all relevant inputs remain unchanged and no new failure challenges it. Run cheap bounded environment/install/reviewer-launch prerequisites before expensive dependent checks; stop and diagnose a failed prerequisite. Environment or generated-version changes can invalidate evidence at an unchanged source tree. Missing metering is **unknown**, not zero; avoid double-counting overlapping elapsed time, cumulative counters, or child sessions. For prototype promotion, label regression and supplemental tests honestly; neither a forced rewrite nor manufactured red evidence establishes original test-first history. No full conversations or implementation rationale for blind roles.
 
 Relevant non-obvious discoveries belong in root `LESSONS/`, following `LESSONS/README.md`, not a duplicate log here. A/B may read only that guide and their approved packet, never lesson entries.

@@ -1,18 +1,18 @@
 # dstack
 
-dstack is a workflow for building software with coding agents, from architecture intake in an empty repository to tested changes in an existing application. You decide what to build and authorize the scope. The task's risk determines which agent sessions do the work and review the result.
+dstack is a workflow for building software with coding agents, from exploring a rough idea or starting an empty repository to tested changes in an existing application. You decide what to build and authorize the scope. The task's risk determines which agent sessions do the work and review the result.
 
-The workflow starts by agreeing on the architecture and observable behavior. High-risk work uses independent test writing and review before implementation; settled repairs use a worker and fresh reviewer, while non-normative documentation can use one worker. Useful discoveries feed back into the instructions through an independently reviewed maintenance process that you approve.
+When the outcome is uncertain, exploration lets an engineer and agent experiment before agreeing on architecture and observable behavior. Formal delivery then follows the authorized route: high-risk work uses independent test writing and review before implementation; settled repairs use a worker and fresh reviewer, while non-normative documentation can use one worker. Useful discoveries feed back into the instructions through an independently reviewed maintenance process that you approve.
 
 This repository packages the **Agentic Software Delivery System** as a specification, prompts, four agent skills, and templates. A skill is a reusable procedure for a particular job. These documents are the product; they describe a workflow to adapt in a separate software repository, rather than installed software or an already available `delivery` command.
 
-The operating model is small: one monorepo, one active task, an existing coding tool, independent sessions where required, Git, the project's test tools, and ordinary GitHub Actions. Product code, tests, and delivery instructions stay together. No custom controller, separate control repository, GitHub App, or evidence service is required.
+The operating model is small: one monorepo, one active task or exploration, an existing coding tool, independent sessions where required, Git, the project's test tools, and ordinary GitHub Actions. Product code, tests, and delivery instructions stay together. No custom controller, separate control repository, GitHub App, or evidence service is required.
 
 ## Use it in your project
 
 1. Read the [package guide](src/README.md) for the process, your role, and package policy.
 2. Open your software project's repository in your coding tool. Supply the complete [`src/` package](src/) from one upstream commit and the [setup prompt](src/SETUP-PROMPT.md). Setup inspects the project, routes architecture decisions, and presents an adaptation plan for your approval.
-3. After setup, use the [intake prompt](src/INTAKE-PROMPT.md) to describe a feature or bug fix. Record its authorized scope, risk tier, route, checks, and budget, then follow the corresponding delivery process below.
+3. After setup, use the [intake prompt](src/INTAKE-PROMPT.md) to explore an idea or describe a feature or bug fix. Exploration keeps a compact handoff; formal delivery records its authorized scope, risk tier, route, checks, and budget, then follows the corresponding process below.
 
 You provide the outcome, consequential decisions, architecture approval, task authorization, and budget. Agents handle testing, implementation, and technical review. You review the final summary and decide whether to merge; you are not expected to write code or perform expert code review.
 
@@ -20,7 +20,7 @@ You provide the outcome, consequential decisions, architecture approval, task au
 
 Setup starts with read-only discovery of the target repository's instructions, manifests, interfaces, tests, and documentation. It preserves useful product documentation and sound tooling. It does not run repository setup scripts merely to discover the project.
 
-**Architecture intake is an explicit part of setup.** The same [intake skill](src/skills/intake/SKILL.md) handles architecture and individual tasks, using the appropriate mode:
+**Architecture intake is an explicit part of setup for delivery.** The same [intake skill](src/skills/intake/SKILL.md) handles exploration, architecture, and individual tasks, using the appropriate mode:
 
 | Starting point | What happens |
 |---|---|
@@ -28,14 +28,29 @@ Setup starts with read-only discovery of the target repository's instructions, m
 | Existing application without usable architecture | Document the observed structure, clarify what is intended, and resolve material gaps. Existing code is evidence, not automatic agreement about desired behavior. |
 | Usable, approved architecture | Reuse it and link its canonical documents instead of repeating the interview or duplicating the design. |
 | Architecture that is unapproved, contradictory, or affected by the task | Reconcile the affected decisions and obtain approval for the resulting record. |
+| Engineer wants to experiment before choosing an outcome | Enter exploration; architecture may remain pending until prototype promotion. |
 
-The result is a short `docs/PROJECT.md`, based on the [project template](src/templates/PROJECT.md). It records purpose and non-goals, constraints, stack, component responsibilities, public interfaces, verification commands, operation, approval, and the next useful task. It favors few components, usually one deployable component; diagrams are optional. **Architecture approval is separate from approval to implement a feature.**
+For architecture intake, the result is a short `docs/PROJECT.md`, based on the [project template](src/templates/PROJECT.md). It records purpose and non-goals, constraints, stack, component responsibilities, public interfaces, verification commands, operation, approval, and the next useful task. It favors few components, usually one deployable component; diagrams are optional. **Architecture approval is separate from approval to implement a feature.** Exploration does not require this approved record before an experiment.
 
 Once you approve the setup plan, adaptation installs one canonical copy of each skill in the coding tool's supported location, reconciles repository instructions into `AGENTS.md`, and records actual launch and check commands. It selects or preserves suitable formatting, linting, type checks, testing, coverage, dependency locking, and security checks. Approved setup may create initial CI and minimal test infrastructure, including a callable scaffold for the first tests, while leaving product features to task delivery.
 
-Repeating setup completes approved gaps without replacing working conventions. Changing the upstream package follows the upgrade process below. Missing architecture blocks A's test-writing session and product implementation, while read-only discovery and approved setup can still proceed. An existing baseline that fails checks or lacks required coverage is a reported gap to address.
+Repeating setup completes approved gaps without replacing working conventions. Changing the upstream package follows the upgrade process below. Missing architecture blocks formal delivery, while read-only discovery, approved setup, and exploration can still proceed. An existing baseline that fails checks or lacks required coverage is a reported gap to address before delivery readiness.
 
-Setup is called usable only after actual demonstrations: architecture routing and authorization, a high-risk delivery through fresh roles and meaningful failing tests/checkpoint to passing exact-candidate checks and review, applicable approved lower-tier pilots, a failing PR blocked by native CI where available, a passing PR, a recorded lesson, and an independently reviewed doctor diff. Missing evidence or unavailable GitHub protections are reported plainly. The [workflow examples](src/WORKFLOW-EXAMPLES.md) illustrate these paths; they are not records of executed demonstrations.
+Setup is called usable only after actual demonstrations: architecture routing and authorization, a high-risk delivery through fresh roles and meaningful baseline/test-checkpoint evidence to passing exact-candidate checks and review, applicable approved lower-tier pilots, a failing PR blocked by native CI where available, and a passing PR. Exercise exploration handoff/promotion on a relevant example and distinguish a walkthrough from an executed run. Demonstrate lessons and an independently reviewed doctor diff when supported by useful evidence; a documented no-gap outcome and zero useful lessons are valid. Missing evidence or unavailable GitHub protections are reported plainly. The [workflow examples](src/WORKFLOW-EXAMPLES.md) illustrate these paths; they are not records of executed demonstrations.
+
+## Exploration and prototype promotion
+
+“Help me try this idea” can enter `intake` exploration mode directly. The engineer and agent may write and revise prototype code, tests, and supporting notes without architecture approval, a formal task contract, or A/B/C/D first. Ask only when a consequential unanswered question blocks the next useful experiment. Brainstorming and examples can help without becoming a mandatory interview.
+
+Exploration defers delivery ceremony while preserving repository permissions, unrelated work, privacy, spending limits, and commit/push/merge/release authority. It cannot change delivery policy or weaken required checks. Prototype results are incomplete evidence, not a claim of delivery readiness.
+
+Treat the branch as the engineer's session, including work across conversations. Keep one compact handoff in the [task record](src/templates/TASK.md): a stable exploration ID, branch, base/latest full commits when available, uncommitted work, relevant conversation references and actual visibility, current experiment, reproducible results, known defects, and next step. No commit is required merely to begin; a moving branch name alone is insufficient to identify later reference material.
+
+An optional observer responsibility belongs to participating agents. At useful checkpoints it records confirmed observations separately from hypotheses, plus evidence and a possible improvement, under the canonical lessons home. It records only threads/artifacts it actually saw. It can maintain notes and the handoff, but cannot approve requirements, redirect work, change policy, or certify the prototype. No separate observer skill, continuous service, or extra agent is required; observation time counts toward spending.
+
+When you request delivery, fresh architecture/task intake pins the prototype at a full commit and separates intended public behavior from accidental behavior, defects, and implementation suggestions. It obtains the applicable architecture, task, route, and budget approvals. Choose either new implementation from the integration baseline or hardening/refactoring the prototype. Do not force a rewrite to manufacture failing tests: tests added after prototyping are supplemental/regression evidence and can pass initially.
+
+For high-risk promotion, A/B receive only approved public behavior and permitted policy, without prototype internals, exploration transcripts, or lesson entries. Their expected results need independent justification. C may receive the pinned prototype as an implementation reference. The normal ownership, exact-candidate verification, independent review, and merge/release boundaries then apply.
 
 ## Task intake and authorization
 
@@ -91,7 +106,7 @@ Infrastructure-only high-risk work uses A → B → infrastructure author → D.
 
 The delivery sequence preserves independent expectations:
 
-1. **Review tests before implementation.** After B accepts them, run feature or bug tests against the approved baseline. They must fail for the intended behavioral reason; broken imports, dependencies, or services do not count. A new-project scaffold demonstrates missing behavior, while a behavior-preserving refactor needs regression evidence rather than an invented failure.
+1. **Review tests before implementation.** After B accepts them, run feature or bug tests against the approved baseline. They must fail for the intended behavioral reason; broken imports, dependencies, or services do not count. A new-project scaffold demonstrates missing behavior, while a behavior-preserving refactor or prototype hardening needs honest regression evidence rather than an invented failure.
 2. **Save the test checkpoint.** Commit the reviewed tests and record that commit in the task before starting C or the infrastructure author. The checkpoint is frozen by convention.
 3. **Implement and verify locally.** The approved implementation author makes the change and runs cheap prerequisites before expensive checks. Full canonical local verification must pass on the exact candidate before opening/updating its PR. Bad or incomplete tests return to blind A and fresh blind B; implementation authors do not repair them to fit the code.
 4. **Complete CI and independent review.** Every required CI platform must pass, and fresh D assesses actual results and the exact candidate before readiness. D cannot fix a candidate and approve that same repair. Further code or material evidence-input changes need renewed checks/review.
@@ -104,6 +119,8 @@ Where explicitly approved in the installed policy governing the task, A may cont
 ## Testing and GitHub checks
 
 Tests primarily exercise the real product entry point: browser journeys through the actual application and backend, CLI execution with outputs and exit codes, or public service/library APIs. Expected results come from the contract, not the implementation being tested. Integration and unit tests fill genuine gaps such as difficult error injection or combinatorial logic; there is no unit-test quota or fixed test-type percentage.
+
+Test review checks independent expectation sources, legitimate alternative inputs/results, units and tolerances, plausible wrong behavior, and whether the intended assertion actually executes. Real native commands and required-platform runs establish compatibility; mocked command success or a broken fixture cannot establish it. For verification/evidence helpers writing logs or reports, check destination changes during execution and protected paths immediately before writes, including after subprocesses.
 
 Tests use synthetic data, isolated state, readiness checks, and bounded waits. Uncontrollable external services can be stubbed at their boundary, with untested behavior documented and an approved provider sandbox check when needed. Tests should not mock away the owned path whose behavior is the requirement. A pass on retry does not settle a flaky failure.
 
@@ -168,9 +185,9 @@ The [source register](src/REFERENCES.md) records adopted ideas, deliberate omiss
 | [Package guide](src/README.md) | Downstream use, owner responsibilities, and package versioning policy. |
 | [Specification](src/DELIVERY-SYSTEM-SPEC.md) | The complete workflow, responsibilities, approvals, and verification requirements. |
 | [Setup prompt](src/SETUP-PROMPT.md) | Discover the target project, route architecture intake, and adapt the package. |
-| [Intake prompt](src/INTAKE-PROMPT.md) | Clarify architecture and tasks, recording risk, route, and authorization. |
+| [Intake prompt](src/INTAKE-PROMPT.md) | Explore ideas, promote pinned prototypes, and clarify architecture/tasks with risk, route, and authorization. |
 | [Doctor prompt](src/DOCTOR-PROMPT.md) | Inspect evidence and patch verified gaps in existing instructions. |
-| [Workflow examples](src/WORKFLOW-EXAMPLES.md) | Project setup, risk-specific routes, corrections, maintenance, pilot rollout, and upgrades. |
+| [Workflow examples](src/WORKFLOW-EXAMPLES.md) | Exploration/promotion, project setup, risk-specific routes, corrections, maintenance, pilot rollout, and upgrades. |
 | [Agent skills](src/skills/) | The four procedures: `intake`, `design-tests`, `implement-task`, and `review-work`. |
 | [Project template](src/templates/PROJECT.md) | Architecture, operation, provenance, approval, and the next slice. |
 | [Task template](src/templates/TASK.md) | Behavioral contract, pinned policy, authorized execution, Current state, and evidence/metrics. |

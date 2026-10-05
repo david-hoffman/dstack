@@ -7,7 +7,7 @@ description: Perform authorized worker tasks, or high-risk product C or infrastr
 
 Package version: [VERSION](../../VERSION). Release policy: [package versioning](../../README.md#package-versioning).
 
-Use one recorded mode and the approved task's pinned local policy throughout. Choose the route before model/effort and execution, following [specification section 4](../../DELIVERY-SYSTEM-SPEC.md#4-risk-scaled-delivery-sessions).
+Exploratory prototype work uses `intake` in exploration mode under [specification section 2.1](../../DELIVERY-SYSTEM-SPEC.md#21-explore-then-promote-a-prototype), without requiring a formal approved delivery task or architecture. This skill handles delivery after that route is selected. Use one recorded mode and the approved task's pinned local policy throughout. Choose the route before model/effort and execution, following [specification section 4](../../DELIVERY-SYSTEM-SPEC.md#4-risk-scaled-delivery-sessions). In an already launched worker, C, or infrastructure-author session, perform the assigned work directly; do not recursively launch that role.
 
 | Approved risk route | Mode, ownership, and acceptance |
 |---|---|
@@ -25,16 +25,18 @@ Confirm the actual owner instruction, recorded scope/tier, checks, budget, gate 
 
 Make the smallest authorized change. Prefer existing code, dependencies, and conventions. In bounded mode, own the named product, test, fixture, and maintenance files together; do not borrow C's restricted packet and assume it authorizes these edits. Derive or challenge test expectations against the approved public contract, not the current output. Preserve accepted behavior and all check semantics. A failed lower-tier check does not authorize a scientific, interface, permission, or policy repair. On a promotion trigger, stop dependent work and return to intake. The owner must explicitly approve the identified high-risk contract, route, precisely named infrastructure/settings and product ownership, checks, and budget before high-risk work begins. A bounded worker cannot self-promote, switch modes to continue, or relax C's restrictions.
 
-Use regression/public-behavior evidence appropriate to the task; do not manufacture a red test for a refactor or a prose edit. Return the exact candidate and evidence for fresh bounded review whenever required, including changed tests/fixtures or infrastructure. A correction needs renewed independent review; do not fix and approve your own repair.
+Use regression/public-behavior evidence appropriate to the task; do not manufacture a red test for a refactor, prototype hardening, or a prose edit. Tests written after prototyping are supplemental, not original test-first history. Return the exact candidate and evidence for fresh bounded review whenever required, including changed tests/fixtures or infrastructure. A correction needs renewed independent review; do not fix and approve your own repair.
 
 ## C — high-risk implementer
 
 Start initial C as a fresh **root session** with the approved task, pinned permitted policy, relevant project docs, reviewed tests, and recorded Git test checkpoint. A subagent or a fork inheriting another role's conversation is not a fresh root. Do not inherit A's conversation.
 
+For prototype promotion, intake first pins the reference and obtains approval of intended behavior. C may receive that prototype as implementation reference; accidental prototype behavior is not an approved requirement. Independently designed passing regression evidence can support unchanged approved behavior during hardening. Do not force a rewrite to manufacture test-first history.
+
 1. Confirm explicit approval of the identified high-risk contract, scope, B acceptance, checkpoint, and meaningful baseline red or appropriate regression evidence. Missing evidence means stop, not fill it in yourself.
 2. Make the smallest product change. Avoid speculative abstractions, unrequested refactors, and new services.
 3. **Do not change tests, fixtures, snapshots, discovery/coverage configuration, workflows, skills, AGENTS.md, or the delivery spec.** This is a prompt rule; a failing check grants no exception.
-4. A suspected test defect, missing requirement, or infrastructure issue returns to the appropriate test/intake/setup owner. The coordinator gives blind A/B only public-contract reproductions and permitted correction inputs, never C's implementation, conversation, coverage-line maps, or copied implementation-bearing reports. Tests added after implementation are supplemental.
+4. A suspected test defect, missing requirement, or infrastructure issue returns to the appropriate test/intake/setup owner. The coordinator gives blind A/B only public-contract reproductions and permitted correction inputs, never C's implementation, prototype internals/history, exploration notes/transcripts, conversation, coverage-line maps, or copied implementation-bearing reports. Tests added after prototyping or implementation are supplemental.
 5. C may continue its own session for an authorized in-scope repair. It gains no new file scope, budget, or repair allowance. All D correction verdicts use fresh independent root review without C's conversation.
 
 ## Infrastructure author — explicitly authorized high risk

@@ -2,6 +2,22 @@
 
 Package version: [VERSION](VERSION). Release policy: [package versioning](README.md#package-versioning). These are illustrative downstream examples, not executed runs, approved requirements, or active pilots. The specification governs the route and gates.
 
+## Explore across conversations, then promote
+
+Request: “I do not know the right interface yet. Help me hack together a prototype so I can try it.”
+
+Intake enters exploration mode directly. The engineer and agent try provisional code and tests, changing direction as they learn. They defer architecture approval, the delivery contract, and delivery roles. Repository permissions, unrelated work, privacy, spending limits, and commit/push/merge/release authority still apply; exploration cannot change policy or weaken required checks. Ask only when a consequential unanswered question blocks the next useful experiment.
+
+The existing task record keeps one compact handoff: stable exploration ID, branch, base/latest full commits when available, uncommitted work, relevant conversation references and actual visibility, experiment, reproducible results, known defects, and next step. A second conversation resumes from this record without resetting spending or pretending a branch name identifies fixed source. No commit is needed merely to begin experimenting.
+
+At useful checkpoints, a participating agent can observe friction. It records that the engineer needed experiments before choosing an interface, with evidence, and separately hypothesizes that intake should offer an example earlier. It appends only useful notes under the actual canonical lessons home and identifies which threads/artifacts it saw. It cannot approve requirements, redirect the experiment, revise policy, or certify readiness. There is no required observer agent or extra skill. No useful lesson is a valid outcome.
+
+Later request: “Use this prototype as a reference and deliver it according to the repository rules.”
+
+Fresh architecture/task intake pins the prototype at a full commit and extracts desired public behavior, accidental behavior, defects, and implementation suggestions. It obtains the applicable architecture/task, route, ownership, checks, and budget approvals. It chooses new implementation from the integration baseline or hardening/refactoring the prototype. A requested promotion starts intake; it does not automatically approve everything the prototype happens to do.
+
+Suppose the prototype performs scientific fitting with unresolved numerical behavior. That uses high-risk delivery. A/B receive only the approved public contract and permitted policy, without prototype source, exploration transcripts, or lesson entries. Expected values need independent references, examples, or properties. C can use the pinned prototype as an implementation reference. Tests added after prototyping remain supplemental/regression evidence and may pass initially; a rewrite solely to manufacture red is unnecessary. Test checkpoint, restricted ownership, exact-candidate checks, fresh review, and normal merge/release authority still apply.
+
 ## Mechanical documentation
 
 Request: “Correct these three broken product-guide links without changing any requirements.”
@@ -17,6 +33,8 @@ Request: “Restore the documented alphabetical ordering of this existing comman
 The ordering contract is already settled. Intake records a bounded tier, the worker's authorized product/test files, canonical checks, model/effort choices, budget, and reviewer route. The worker may inspect implementation and add distinguishing public-command cases. A fresh independent reviewer checks the expected order against the approved contract, challenges discrimination and positive/boundary cases, reviews both tests and product changes, and assesses the exact passing candidate after full local checks and required CI. The worker cannot approve their own repair.
 
 Several input permutations with the same ordering decision are coverage examples. A distinct empty-input guarantee or rejection rule is a separate behavioral scenario. Five scenarios is a planning heuristic; a larger coherent contract can be approved once. Parameterized test count does not define scope, and removing assertions needs a reviewed obligation mapping.
+
+The same applies to a settled function contract with 33 input examples: approve the coherent outcomes once, then let the worker choose ordinary test values. Distinct rejection rules or new guarantees remain material behavior requiring authorization. Review valid alternatives as well as rejection cases, and verify that a plausible wrong implementation would fail the relevant assertion.
 
 If review reveals an unsettled collation convention, stop dependent work and return that meaning to intake. A lower-tier failure does not authorize a new interface or scientific repair.
 
@@ -68,7 +86,17 @@ Suppose an end-to-end test fails because its process does not wait for applicati
 
 Run `delivery doctor`. If readiness is already covered, doctor reports a test/workflow defect and leaves policy alone. For an evidenced policy gap, it edits the smallest affected existing instructions on a documentation branch. Fresh independent policy review and explicit owner approval of the identified patch precede activation; no fabricated product-red evidence is needed. Git records the change and an appended disposition links it. Doctor cannot repair a red build by dropping requirements. Upstream provenance stays recorded, and active tasks retain their pinned policy unless explicitly migrated without erasing attempts or allowances.
 
+If the review finds no missing rule, record that no-gap outcome. Do not invent a lesson or policy patch to finish a demonstration.
+
 An existing `LESSONS.md` or `docs/LESSONS/` log stays in place pending separate migration approval. Agree preservation and link handling first. Entry-body/link edits require an explicit append-only exception with original Git bytes, preserved IDs/dates/evidence, verified inbound/supersession links, and one canonical home. Moving a directory is not a blindness improvement.
+
+## Verify the actual operation
+
+Suppose a copied interpreter cannot find its shared library on a required platform. Classify the fixture/environment failure before repair. Its exit cannot prove that product preflight rejected the intended input if the relevant assertion never executed. Repair the authorized fixture, then run the real command on that supported environment.
+
+Suppose a subprocess can redirect a verification report's output directory through a symlink after initial validation. Test that operation-time transition and protect tracked files and Git metadata at the actual report write. An initial path check or damage detection afterward cannot establish safe writing.
+
+Suppose an unchanged verification plugin reads an external file that changed since a cached pass. That pass is stale for the affected claim. Prefer ordinary commands and retained artifacts; add custom receipts/caches only under authorized scope with known relevant inputs and demonstrated total benefit. Faster wall time alone does not prove lower accepted-task cost when runner consumption, failed attempts, or owner effort increase.
 
 ## Roll out changed delivery rules
 
