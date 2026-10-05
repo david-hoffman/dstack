@@ -10,7 +10,7 @@ The complete pstack README, the five selected skill texts below, and the complet
 
 [README](https://github.com/cursor/plugins/blob/main/pstack/README.md).
 
-The project offers a broad collection of skills, principles, playbooks, and multi-agent mechanisms. This design does not install that collection. Only the specific ideas below are adapted. Its README's proceed-without-human-confirmation principle is not adopted; our intake still needs owner decisions. No named model defaults are copied.
+The project offers a broad collection of skills, principles, playbooks, and multi-agent mechanisms. This design does not install that collection. Only the specific ideas below are adapted. Its README's general proceed-without-human-confirmation principle is not adopted: intake still needs actual owner authorization, with the specification's narrow complete-instruction exception for lower tiers. No named model defaults are copied.
 
 ### R2 — Test behavior, not implementation
 
@@ -34,7 +34,7 @@ Prefer removing unnecessary code and duplicate instructions before adding more. 
 
 [Show-me-your-work skill](https://github.com/cursor/plugins/blob/main/pstack/skills/show-me-your-work/SKILL.md).
 
-Adapt the compact evidence-linked append-only trail and superseding corrections into LESSONS.md. Do not copy its transcript-audit and cross-model-review stages, TSV-specific helper, or mandatory per-reply attention format. Our log captures selected reusable discoveries, not every decision.
+Adapt the compact evidence-linked append-only trail and superseding corrections into the target's root `LESSONS/` home; [LESSONS.md](LESSONS.md) is this package's format-guide source. Existing log layouts require a separately approved migration, not a silent move. Do not copy its transcript-audit and cross-model-review stages, TSV-specific helper, or mandatory per-reply attention format. Our log captures selected reusable discoveries, not every decision.
 
 ### R6 — Improve instructions from experience
 

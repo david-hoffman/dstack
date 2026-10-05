@@ -5,7 +5,7 @@ description: Use when checking dstack package versions, preparing a document-pac
 
 # Release the document package
 
-This is maintainer skill source and a readable checklist, outside automatic skill discovery. It is not installed by downstream setup. Read root [AGENTS.md](../../AGENTS.md), the [versioning policy](../../src/README.md#package-versioning), [VERSION](../../src/VERSION), and [changelog](../../src/CHANGELOG.md). The policy is authoritative; do not copy its rules into another manifest.
+This repository maintainer skill lives under `.agents/skills/` and provides a readable checklist. It is not installed by downstream setup. Read root [AGENTS.md](../../../AGENTS.md), the [versioning policy](../../../src/README.md#package-versioning), [VERSION](../../../src/VERSION), and [changelog](../../../src/CHANGELOG.md). The policy is authoritative; do not copy its rules into another manifest.
 
 ## Choose the requested mode
 

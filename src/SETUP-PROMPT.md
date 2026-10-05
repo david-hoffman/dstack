@@ -1,59 +1,147 @@
 # Setup prompt
 
-Package version: [VERSION](VERSION). Release policy: [package versioning](README.md#package-versioning). Supply the whole package to a fresh coding-harness session at the target monorepo, then use this prompt. Nothing here claims that a `delivery` command is already installed.
+Package version: [VERSION](VERSION). Release policy: [package versioning](README.md#package-versioning). Supply the whole package to a fresh coding-harness session at a separate target monorepo. This prompt describes authorized downstream work; do not execute setup or pilots in the document-package repository. Nothing here claims that a `delivery` command or approved pilot is installed.
 
 ```text
 Set up the Agentic Software Delivery System described in DELIVERY-SYSTEM-SPEC.md.
-Read that file once. It supersedes the earlier conversation drafts. Follow the package
-versioning policy in README.md; VERSION is the one package version, not a per-file
-or per-skill version. Verify the complete supplied package is one upstream commit
-before adapting it. For a published release, verify its immutable tag and full commit.
-Use an unpublished/development snapshot only with my explicit choice; never call it
-published. Record the source repository, package version, tag when published, and full
-upstream commit in existing docs/PROJECT.md.
+Read it once as the authority. Follow the package policy in README.md; VERSION is
+one package version, not a per-file/skill version. Verify the entire supplied package
+is one upstream commit before adaptation. For a published release, verify its immutable
+tag and full commit. Use an unpublished/development snapshot only with my explicit
+choice and preserve that label. Record repository/version/tag/full upstream commit in
+the existing docs/PROJECT.md.
 
-Use ONE monorepo, existing coding-harness sessions, four skills, ordinary GitHub
-Actions, and Git. Do not build a custom controller, separate control repository,
-GitHub App, immutable test store, permission enforcement, or agent swarm.
-Restrictions on editing reviewed tests/workflows and append-only lessons are prompts.
+Use one monorepo, existing harness sessions, four skills, ordinary Actions, and Git.
+Do not build a controller, state store, scheduler/daemon, control repository, GitHub App,
+permission enforcement, evidence database, or autonomous repair loop. Role/file rules
+and append-only lessons are instructions; never claim technical isolation from them.
 
-Start read-only. Preserve existing product docs and sound tooling. Find usable
-approved architecture; otherwise route to architecture intake. An empty repo needs
-an owner-approved minimal project record before choosing a stack. Existing code is
-evidence, not automatically the intended behavior. Repeated setup must not overwrite
-working choices. Do not implement product features during setup.
+Start read-only. Preserve existing product docs and sound tooling. Reuse approved
+architecture or route unresolved material decisions to architecture intake. Existing
+code is evidence, not automatically intended behavior. An empty repo needs an approved
+minimal project record before stack selection. Repeated setup completes approved gaps;
+it does not overwrite working choices or implement product features.
 
-Show the small setup plan and obtain approval. Adapt paths and instructions without
-creating two live specs or overwriting the product README. Put LESSONS.md at the repo
-root. Install the four skills in the selected harness's supported location, with
-one canonical copy of each. Generate or reconcile the target repository's AGENTS.md
-from templates/AGENTS.template.md and add a thin native bridge only when required.
-Record actual launch and check commands. Record the source-to-installed mapping,
-omissions, and local adaptations in docs/PROJECT.md. Carry VERSION, CHANGELOG.md,
-and the package policy as references at mapped paths; adapt every relative reference.
-Target Git records adapted instructions and approval. If changing the upstream base,
-compare previous upstream, new upstream, and local instructions. Reconcile the entire
-adopted package and migration notes, show the diff, and obtain approval before updating
-its recorded upstream base. Do not silently overwrite adaptations or mix versions.
+Show a small setup plan with scope/checks/budget and obtain approval before applying it.
+Install one canonical specification and four skills at supported harness paths, preserve
+the product README, and reconcile AGENTS.md from templates/AGENTS.template.md. Add a thin
+native bridge only if required. Record actual launch/check/doctor commands, installed
+path mapping, omissions, and adaptations. Carry VERSION, CHANGELOG.md, and package policy
+as mapped references; adapt relative links and preserve required source references once.
 
-Infer languages/frameworks. Research suitable native formatting/lint/type/test tools.
-Create or adapt ordinary CI and minimal test infrastructure as authorized setup work.
-Prefer real end-to-end/public-entry-point tests, smaller tests only for useful gaps.
-Retain 100% measured statement/branch coverage and report unsupported measurement.
-Use GITHUB-SETUP.md; apply settings only with permission or give exact owner actions.
+For a new lesson home, adapt the source LESSONS.md format guide
+to root LESSONS/README.md and append individual evidenced entries under LESSONS/.
+Do not create a second live log or silently relocate an existing LESSONS.md, docs/LESSONS/,
+or other layout. Propose a separate preservation/link migration, approved before moving.
+Entry-body/link rewrites need an explicit append-only exception, original bytes in Git,
+preserved IDs/dates/evidence, verified inbound/supersession links, and one final home.
+Record the actual home. Blind A/B may read only its guide and their approved public packet,
+never entries, broad docs/history, or implementation-bearing links. Coordinator/doctor
+verify relevant lessons and promote approved public facts; D assesses the candidate first.
 
-Implement delivery doctor as a thin invocation of review-work in doctor mode using
-DOCTOR-PROMPT.md. No daemon or scheduled LLM loop. Default behavior writes an evidenced
-spec/instruction patch on a docs branch, then waits for owner approval; --check only
-reports. Doctor preserves upstream provenance and never bumps the official package
-version; target Git records approved local changes. Obtain approval for and commit the
-local policy before starting delivery. Each task pins an existing approved local policy
-commit, not its own eventual hash. A/B receive permitted policy text from that revision
-without implementation or history access. Active tasks retain their pinned rules.
+When changing upstream base, compare previous upstream, new upstream, and local adapted
+instructions across every adopted component and migration note. Show the full diff and
+obtain independent policy review and explicit approval before activation/updating the
+base record. Do not mix releases, overwrite local adaptations, or fabricate upstream
+versions. In-flight tasks keep their pinned approved local policy unless explicitly
+migrated; preserve earlier attempts, spending, and allowances.
 
-Demonstrate fresh A/B, meaningful red tests and a committed test checkpoint, fresh C,
-green checks, fresh D, and a normal PR. Add one honest lesson and demonstrate doctor
-editing the spec. Label setup evidence honestly; do not fabricate independent sessions
-or active protections. Preserve required source references once; do not make routine
-agents reread the archive. Stop at the approved budget and report remaining gaps.
+Align tier rules and ownership across the spec, installed/generated AGENTS, task/intake
+records, role procedures, and guides before activating a policy change. Policy adoption
+requires my explicit approval of the identified patch and fresh independent policy review;
+it is not mechanical editing and requires no fabricated product-red evidence.
+Record an approved local policy commit before delivery; each task pins that existing
+commit, never its own eventual hash. Supply A/B only permitted text from that revision.
+
+Record each task's tier/reason, route, edit scope, checks, per-role model/effort choices,
+gate mode, escalation triggers, budget, and allowances. Mechanical non-policy work uses
+one worker, with optional independent review unless required by the contract. Bounded
+settled behavior or scoped dependency/lint/workflow maintenance uses an authorized worker
+who may edit named tests/maintenance files and a fresh independent reviewer; preserve
+settled gates/platform semantics. Scientific/numerical, binary, custom-oracle, security/
+permission, substantial-interface, unresolved or uncertain work uses fresh root blind A/B,
+fresh root product C and/or the expressly authorized infrastructure author, and fresh root D.
+Authority/permission promotion stops the bounded worker until I explicitly approve the
+identified high-risk contract, route, named infrastructure/settings ownership, checks,
+and budget. Infrastructure-only high risk uses A -> B -> infrastructure author -> D;
+use the existing implement-task in infrastructure author mode for named infrastructure/
+settings only. Tests remain with A/B; policy patches use separate independent policy review.
+Mixed work assigns separate fresh product C and infrastructure author sessions; A/B and D
+cover all behavior/authority, and D inherits neither author conversation. Product C keeps
+absolute restrictions on infrastructure/settings and other restricted files; promotion
+never silently switches modes or relaxes C. An authorized infrastructure repair uses a
+fresh root infrastructure author and fresh D within the task-wide default single repair.
+The infrastructure author has no continuation exception.
+Mixed/uncertain scope takes the highest tier; changed tests/fixtures always get independent
+review. A/B stay blind; high-risk C retains restricted-file rules. A may continue its own
+author session only while blindness and approved scope remain intact; C may continue its
+own session for an authorized repair within allowances. B/D remain fresh and independent.
+No context clearing, new session, model swap, or delta resets rounds, budget, or repairs.
+Count completed correction reviews in their recorded window; diagnose after two
+nonacceptances. Default task-wide implementation repair allowance remains one.
+
+Infer languages/frameworks and preserve suitable native formatting/lint/type/test tools.
+Create/adapt initial ordinary CI and minimal test infrastructure only as authorized setup.
+Keep public-entry-point/end-to-end tests, smaller tests for genuine gaps, and 100% measured
+statement/branch coverage globally and per package on every required platform, including
+never-imported owned runtime and applicable subprocesses. Report unsupported measurement.
+Use GITHUB-SETUP.md. Inspect effective native protections, trusted check sources, current
+base/integration rules, and bypass settings read-only. Apply settings only in separately
+authorized scope or provide exact remaining owner actions and unapplied gaps.
+
+Default submission requires full canonical local verification of the exact candidate
+and every required CI result. Reuse only evidence whose candidate/base, test, locks,
+environment, commands, and material ignored/untracked inputs remain valid. Record build
+version inputs/resolved version when Git determines artifacts; tree equality alone
+cannot identify artifacts across head/test-merge/actual merge identities. Run cheap
+interpreter/install/import/isolated-environment and actual reviewer launch/auth/connectivity
+prerequisites before expensive dependent phases; stop and diagnose failed prerequisites.
+Use bounded native terminal waits, not repeated unchanged polling or an automatic loop.
+Profile slow tests before changes; immutable build reuse and clean installs must retain
+every claimed independence/packaging/negative-control proof. Helpers/shards require their
+own authorized infrastructure scope and fresh independent review, with complete reports
+and coverage per platform/package.
+
+A CI-authoritative route needs its own separately approved eligible policy pilot; editing
+instructions does not activate it. Only settled lower-tier tasks qualify after native
+control/current-base/trusted-check/bypass and exact artifact-proof prerequisites pass.
+Exclude high risk, uncertainty, and edits to that pilot's gates, coverage/discovery,
+build/release proof, protections, or authority. Approved focused local checks precede
+submission; full exact-candidate CI on every platform and independent review precede
+readiness and my merge action. Any failed/cancelled/skipped/neutral/absent/incomplete
+platform/shard/report fails the aggregate. Known applicable failures block submission
+until classified repair and relevant local checks establish that their cause is addressed.
+A waiting pilot PR is unverified, never ready. CI failures stop readiness and spend
+existing allowances; repaired updates renew the approved local gate and full CI.
+Invalidated candidate/base/environment/version evidence needs renewed checks/review.
+Unknown controls or unavailable exact artifact proof block eligibility. Fall back to
+full local gating if prerequisites lapse. No merge/release authority is delegated.
+
+Implement delivery doctor only as a thin invocation of review-work in doctor mode using
+DOCTOR-PROMPT.md. --check reports without edits. A confirmed policy gap produces a focused
+spec/instruction diff, independent policy review and explicit patch approval before
+activation/authorized commit. Doctor preserves upstream provenance, never bumps the
+official package version, and never repairs a product defect by weakening requirements.
+
+Before any rollout demonstration, agree acceptance criteria and a bounded budget for
+one documentation task, one conventional bounded repair, one infrastructure task, and
+one high-risk public/synthetic task. Use honest route-appropriate evidence: high-risk
+A/B, meaningful baseline/test checkpoint, C, exact green local/CI checks, and D; no
+invented product-red evidence for policy docs. Do not rerun completed owner data merely
+for benchmarking. Record actual protections, launches, findings, and gaps; do not
+fabricate independent sessions or claim prompt restrictions were mechanically verified.
+Demonstrate a lesson append and independently reviewed doctor patch where supported.
+
+Keep in-flight tasks on original rules unless explicitly migrated without resetting
+allowances. Suspend a lighter route on missed material obligations, source exposure,
+false acceptance, or unresolved gaps; diagnose within existing allowances before retrying.
+Compare complete accepted-task resource cost and elapsed critical path separately, with
+model/effort/token/cost evidence, failed launches, calibration/rework/checks, owner waits,
+scenarios versus coverage examples, review windows/rounds, repairs, and defects. Unknown
+metering stays unknown; overlapping durations are not additive elapsed time. Choose
+model quality by oracle/acceptance complexity, not role name; A/B are not default cheaper
+than C. Calibration for blind roles uses independently reviewed public/synthetic material.
+Escalation requires diagnosis and never restores blindness or resolves missing semantics.
+Wider adoption or a ten-task follow-up requires separate approval/budget. Stop at the
+approved budget and report remaining gaps; do not automatically merge or release.
 ```
