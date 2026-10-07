@@ -106,9 +106,20 @@ nonacceptances. Default task-wide implementation repair allowance remains one.
 
 Infer languages/frameworks and preserve suitable native formatting/lint/type/test tools.
 Create/adapt initial ordinary CI and minimal test infrastructure only as authorized setup.
-Keep public-entry-point/end-to-end tests, smaller tests for genuine gaps, and 100% measured
-statement/branch coverage globally and per package on every required platform, including
-never-imported owned runtime and applicable subprocesses. Report unsupported measurement.
+Keep public-entry-point/end-to-end tests and smaller tests for genuine gaps. Before formal
+test design, explain coverage choices under spec section 5.1 and obtain my choice once:
+behavior coverage with risk review (recommended for ordinary application work), or that
+evidence plus a selected line, statement, branch, or combined measured target. Lines and
+statements are different metrics; 100% is a valid explicit target, not an implied default.
+Record the choice, reason, approval, and each selected metric's tool/command, exact threshold,
+runtime/package/platform scope, aggregation, exclusions, and reporting limits in docs/PROJECT.md.
+Tasks inherit the approved policy and add their risks; reuse settled answers. Preserve an
+installed gate until a separately reviewed, owner-approved policy amendment and authorized
+infrastructure changes reconcile it; explicitly migrate active tasks without resetting spending.
+Unless an explicitly approved scope says otherwise, selected measurement includes all
+instrumentable owned runtime globally and per package on each required platform, including
+never-imported files and applicable subprocess/server/browser code. Missing or unsupported
+required measurement blocks its gate; advisory metrics cannot block solely on a percentage.
 Use GITHUB-SETUP.md. Inspect effective native protections, trusted check sources, current
 base/integration rules, and bypass settings read-only. Apply settings only in separately
 authorized scope or provide exact remaining owner actions and unapplied gaps.
@@ -122,16 +133,23 @@ interpreter/install/import/isolated-environment and actual reviewer launch/auth/
 prerequisites before expensive dependent phases; stop and diagnose failed prerequisites.
 Check real native commands and required platforms for compatibility. Test review checks
 expectation sources, valid alternatives, units/tolerances, plausible wrong behavior, and
-actual assertion execution. Distinguish environment/fixture, test, product, and unresolved
-requirement failures before authorized repair. For verification/evidence helpers writing
-logs or reports, check the actual destination leaf/ancestors and protected targets
+actual assertion execution. A maps behavior and relevant high-risk paths; B independently
+audits omissions before accepting tests. Bounded work uses its existing reviewer. Classify
+coverage findings under spec section 5.2 before correction: approved behavior/test gaps go
+to blind A/B through source-free public reproductions, needless product complexity to C,
+new semantics to intake, measurement/configuration faults to authorized infrastructure, and
+unresolved selected-metric conflicts to an explicit owner policy decision. Preserve role
+ownership, blindness, and remaining allowances; never recycle an unexplained gap or invent
+internal guards/tests just to improve a percentage. Distinguish environment/fixture, test,
+product, and unresolved requirement failures before authorized repair. For verification/
+evidence helpers writing logs or reports, check the actual destination leaf/ancestors and protected targets
 immediately before each write, including after a subprocess that can redirect paths.
 An initial path check or later damage report does not establish safe writing.
 Use bounded native terminal waits, not repeated unchanged polling or an automatic loop.
 Profile slow tests before changes; immutable build reuse and clean installs must retain
 every claimed independence/packaging/negative-control proof. Helpers/shards require their
 own authorized infrastructure scope and fresh independent review, with complete reports
-and coverage per platform/package.
+and every selected coverage target per approved platform/package.
 
 A CI-authoritative route needs its own separately approved eligible policy pilot; editing
 instructions does not activate it. Only settled lower-tier tasks qualify after native

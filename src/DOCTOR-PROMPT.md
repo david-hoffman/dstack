@@ -28,12 +28,23 @@ work at the correct tier. Do not rewrite intended behavior to match a defect or 
 approve architecture drift. Policy editing is not mechanical self-approval and requires
 no fabricated product-red evidence or scientific A/B tests.
 
+For coverage friction, use spec sections 5.1–5.2 and the task's pinned project policy.
+Classify a missing approved behavior/risk, needless implementation complexity, unresolved
+semantics, or measurement/configuration fault before proposing a correction. An uncovered
+branch alone does not justify a new requirement or another A/B cycle. Preserve blind
+source-free test corrections, author ownership, spending and remaining allowances.
+Do not lower an existing gate or activate a relaxation through a failing task's repair.
+An evidenced mismatch may justify a separately reviewed, owner-approved policy amendment;
+reconcile affected instructions/checks and explicitly migrate active tasks before use.
+
 Check rule interactions across tier boundaries/ownership, complete-request authorization,
 blind packets, correction scope, author continuation, model/effort choices, budget and
 allowances, evidence validity, gates, and installed paths. Default submission still needs
-full exact-candidate canonical local verification plus required CI and complete measured
-coverage. Keep high-risk fresh root blind A/B, the authorized fresh root product C and/or
-infrastructure author, and fresh root D. Promotion stops a bounded worker pending explicit
+full exact-candidate canonical local verification plus required CI, approved behavior/risk
+evidence, and every selected measured target. Unselected metrics are advisory; missing
+required measurements or unmet selected targets still block. Keep high-risk fresh root
+blind A/B, the authorized fresh root product C and/or infrastructure author, and fresh root D.
+Promotion stops a bounded worker pending explicit
 approval of the high-risk contract/route, named infrastructure/settings scope, checks, and
 budget. Existing implement-task infrastructure author mode owns only that named scope;
 product C retains absolute restrictions, tests stay with A/B, and policy is separately

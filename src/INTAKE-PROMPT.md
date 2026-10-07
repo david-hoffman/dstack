@@ -53,6 +53,19 @@ data within accepted behavior and budget do not need fresh approval.
 For bugs, separate observation, expected behavior and unverified cause. Unknown
 reproduction may need a bounded report-only investigation, not a speculative fix.
 
+Resolve the project's coverage choice before formal test design under spec section 5.1.
+Explain behavior coverage with risk review (recommended for ordinary application work)
+and optional line, statement, branch, or combined targets; 100% is valid when explicitly
+chosen. Lines and statements are different tool metrics. Record my choice, reason and
+approval in docs/PROJECT.md, with each selected metric's tool/command, exact threshold,
+runtime/package/platform scope, aggregation, exclusions and reporting limits. Reuse an
+approved choice; tasks inherit it and identify relevant high-risk paths and their planned
+evidence. A maps these obligations and B independently audits omissions; bounded work
+uses its existing independent reviewer. A's tests alone do not certify completeness.
+Do not silently replace an installed 100% gate. A changed metric, target, scope or exclusion
+uses the independently reviewed, owner-approved policy amendment path and authorized
+infrastructure changes, with explicit active-task migration and preserved allowances.
+
 Select the route by risk, not changed-line count, and record its reason:
 - Non-policy mechanical/documentation: one worker, reviewable deterministic diff,
   owner acceptance and any contract-required review; no changed executable
@@ -110,7 +123,9 @@ exhausted repair allowance need renewed approval. Approved in-flight rule migrat
 must preserve earlier windows, attempts, spending and repairs.
 
 Use full canonical local verification of the exact submission candidate and all
-required CI as the default, retaining 100% measured statement/branch coverage.
+required CI as the default, meeting the approved behavior/risk obligations and every
+selected measured target. An unselected metric is advisory and cannot block solely on
+its percentage; missing or unsupported required measurement remains an unresolved gate.
 A CI-authoritative pilot for eligible settled mechanical/bounded work needs separate
 specific policy approval plus verified native protection/trusted-source/complete
 aggregate/integration/artifact prerequisites. It is not activated here; high-risk
@@ -129,6 +144,13 @@ while scope and A's blindness hold; B/D verdicts remain fresh and independent.
 Infrastructure-author repair requires a fresh infrastructure author and fresh D
 within that same task-wide repair allowance; the A/C continuation exception does
 not extend to infrastructure author.
+
+Before commissioning a coverage correction, classify it under spec section 5.2. Missing
+approved behavior or concrete reachable risk needs a source-free public reproduction
+for blind A/B. Needless implementation complexity belongs to C, new semantics to intake,
+and measurement/configuration faults to authorized infrastructure. An unresolved selected
+metric needs an explicit owner policy decision or remains blocked; never send the same
+unexplained gap through repeated A/B/C/D cycles. Keep existing budgets and repair limits.
 
 No code or executable test suite during architecture/task intake. Stop formal
 preparation on an unanswered material question or its budget. No additional

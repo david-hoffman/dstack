@@ -36,6 +36,8 @@ For a policy-change task, distinguish the governing baseline from the proposed p
 - R2: <observable requirement>
 - Inputs, outputs, errors, and permissions:
 - Success, error, and boundary examples:
+- Approved project coverage policy reference at the pinned revision; inherited choice and any explicitly approved policy change/migration:
+- Relevant high-risk paths, required observable outcomes, and unresolved risk decisions:
 - S1: <distinct approved decision and observable outcome; requirement IDs>
   - Optional coverage examples: <equivalent values and the accepted decision they exercise>
 - Unresolved material decisions:
@@ -44,6 +46,8 @@ For a policy-change task, distinguish the governing baseline from the proposed p
 Start with roughly five behavioral scenarios as a planning heuristic. A distinct rejection, interpretation, output guarantee, or boundary outcome is a separate scenario. Approve a larger coherent contract once when needed; equivalent data within accepted behavior and budget need no new approval. Neither parameterized-test counts nor branch counts determine contract size. Do not combine unrelated obligations to meet the heuristic.
 
 For a bug: observed versus expected behavior, environment, reproduction evidence, and hypotheses. Unknown causes do not authorize a speculative fix.
+
+Resolve an undefined request for “complete coverage” before tests are written, using [specification section 5.1](../DELIVERY-SYSTEM-SPEC.md#51-agree-on-coverage-before-writing-tests). Inherit settled project choices without another interview. Behavior coverage and risk review always apply to the approved scope; numerical line/statement/branch targets apply only as selected. Map scenarios and risks to test/review evidence below. An accepted A/B suite is the test baseline, not proof of every possible behavior or immunity to a concrete omission found later.
 
 ## Authorized execution
 
@@ -57,7 +61,7 @@ Tier and reason; role route; named author/mode and owned files/settings; exact e
 
 Record the selected route and named edit ownership, not every option above. Uncertain impact promotes the tier; mixed scope takes the highest tier unless separately approved contracts justify a split. Changed tests/fixtures and dependency/workflow/gate maintenance require independent review. Removed assertions need a reviewed obligation mapping; unsettled semantics or execution/security authority require the high-risk route. Stop a bounded worker on promotion pending explicit owner approval of the identified high-risk contract, route, named infrastructure/settings ownership where applicable, checks, and budget. Do not merely switch worker modes; product C's restrictions remain absolute. These changes need their own authorized scope.
 
-Default gate: full canonical local verification of the exact submission candidate, then every required CI platform, with 100% measured statements and branches globally and per package across instrumentable owned runtime, including never-imported files and applicable subprocesses. Incremental checks guide edits. An optional CI-authoritative pilot for eligible settled mechanical/bounded work requires separate specific owner approval and verified native protection, trusted-check, aggregate, integration, and exact artifact/version prerequisites; this template does not activate it. High-risk work retains full local verification; execution/security authority changes are ineligible for that pilot. Record its policy/evidence reference if approved; otherwise use the default.
+Default gate: full canonical local verification of the exact submission candidate, then every required CI platform, satisfying the referenced coverage policy. Selected metrics retain their exact thresholds, measurement scope, and complete required reports; an unselected metric alone cannot block acceptance. Incremental checks guide edits. An optional CI-authoritative pilot for eligible settled mechanical/bounded work requires separate specific owner approval and verified native protection, trusted-check, aggregate, integration, and exact artifact/version prerequisites; this template does not activate it. High-risk work retains full local verification; execution/security authority changes are ineligible for that pilot. Record its policy/evidence reference if approved; otherwise use the default.
 
 Record each review window and approved round cap. Every completed correction review consumes a round in its recorded window. After two nonacceptances, stop and diagnose; another attempt needs a bounded diagnosed correction under the approved path and remaining allowances. Default: at most one implementation repair across the task. Preserve previous windows, spending, and repairs; a new session, renamed task, narrower review, model change, or migration does not replenish them.
 
@@ -80,9 +84,12 @@ Approval authorizes the recorded routine role transitions, checks, in-scope corr
 
 Maintain this one concise state; link earlier accepted reports instead of copying them. A/B receive a separate approved public-contract packet, never prototype internals, exploration notes, or implementation-bearing status.
 
+For a coverage finding, record the concrete missing behavior/risk or selected metric shortfall and its classification under [specification section 5.2](../DELIVERY-SYSTEM-SPEC.md#52-classify-coverage-findings-before-correction): test gap, unnecessary implementation complexity, unresolved semantics, measurement defect, or policy conflict. Route it to the corresponding owner within existing allowances; a bare uncovered branch does not automatically return to A.
+
 ## Evidence and metrics
 
 - Role/session and accepted-report links; original test checkpoint and intended baseline result where applicable; correction diffs/dependency mapping; supplemental-test labels:
+- Requirement/scenario-to-test mapping and short independent risk-audit disposition; concrete omissions and their resolution (or why runtime obligations are unaffected for non-behavioral work):
 - Evidence receipt links: tested revision/tree, test revision, canonical command, dependency-lock identity, relevant environment/tool versions and platform, integration base, exact result/coverage, and unresolved limits. Fingerprint material ignored/untracked inputs separately; keep final candidate identity/results outside its tracked tree.
 - Build/install version evidence when Git-derived: commit/tag/dirty state, build configuration, resolved version, and artifact identity. Head, test-merge, and actual merge identities may differ.
 - Per-role model/effort, responses, input/cached/output tokens, available monetary cost, elapsed/owner-wait minutes, and check wall time, including calibration, failed launches, and rework:
