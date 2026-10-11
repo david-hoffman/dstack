@@ -188,6 +188,22 @@ The A/B/C routes below apply to high-risk work. Bounded work keeps its authorize
 
 Validate untrusted public inputs and protect real invariants where the contract or a concrete reachable failure calls for it. Do not add finite/positive checks to every internal value, introduce new error behavior, force impossible internal states, or write duplicate implementation-coupled tests solely to satisfy a percentage. Difficult but reachable failures may warrant smaller tests through suitable boundaries; they must assert a meaningful outcome. If a discovery cannot be expressed within the blind packet, resolve the contract or policy issue before commissioning a test. Supplemental tests retain that label. Classification and corrections preserve the existing budget, review rounds, and repair limits; changing the finding's name or route does not replenish them.
 
+### 5.3. Test value and safe pruning
+
+Apply this checklist when adding or materially changing tests, using the existing requirement mapping and review evidence:
+
+- Name the approved observable behavior or independently meaningful contract the test protects.
+- Describe a credible wrong outcome that the assertions detect, and why existing tests would miss it. Another test layer needs a distinct risk or boundary; prefer extending a suitable existing case over repeating the same proof.
+- Justify the test boundary. Flag any requested production export, hook, global, or wrapper used only by tests; prefer an existing public boundary where it can prove the same obligation. A justified way to exercise a difficult reachable failure remains valid.
+
+Challenge assertions that compare a result with itself, expectations computed by the subject, mocks or fixtures that supply the behavior being claimed, and negative controls that pass because an unrelated guard rejects the input. A copied inventory or source-string check needs an independent contract, such as a required protocol byte, configuration key, package path, or architecture restriction. Static inspection, slowness, or sensitivity to a refactor alone does not justify deletion.
+
+Before removing or consolidating tests/assertions, extend the existing obligation mapping with the exact test/location, failure it detects, remaining test or check that preserves each obligation, and risk and validation commands. If no proof remains, establish that no approved obligation is lost; uncertainty requires retention or intake/promotion. The existing independent reviewer compares the removed assertions with the retained proof. Treat a meaningful baseline failure as a possible defect to diagnose, not evidence that its test is obsolete. Repairs still need their own authorized scope.
+
+Implementation-aware discovery stays with the authorized bounded worker/reviewer or D: inspect relevant owners, callers, overlapping tests, and history to verify why a test or test-only seam exists. Remove an obsolete seam only through its authorized product or infrastructure owner, with renewed verification and review. A/B use only their permitted public-contract/test packet and source-free evidence; they never read implementation or history to complete this checklist. Route findings and high-risk corrections under section 5.2 without combining ownership or expanding file permissions.
+
+These criteria adapt [OpenClaw's test audit](REFERENCES.md#r11--openclaw-test-audit) within the existing four skills. Use them to preserve useful proof, with no deletion target, separate audit role, or campaign requirement.
+
 ## 6. Ordinary GitHub CI
 
 Use the monorepo's ordinary GitHub Actions workflow. Prefer one required job, `verify`, running the project's canonical checks in order. A genuine multi-platform need may require several jobs; keep every required result visible. No custom gate publisher or GitHub App.
