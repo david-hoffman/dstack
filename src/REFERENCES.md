@@ -1,6 +1,6 @@
 # References and reading scope
 
-Package version: [VERSION](VERSION). Source register updated: October 5, 2026. Initial design review: September 26, 2026. This is a source register and design note, not an archive of original source bytes or a substitute for downstream code/security review.
+Package version: [VERSION](VERSION). Source register updated: October 11, 2026. Initial design review: September 26, 2026. This is a source register and design note, not an archive of original source bytes or a substitute for downstream code/security review.
 
 ## Sources read for the initial design
 
@@ -69,6 +69,16 @@ The review read [simrecon PR #3](https://github.com/david-hoffman/simrecon/pull/
 These observations support delivery routes based on uncertainty and consequences, approval of coherent outcomes rather than scenario-count quotas, stronger review of test expectations and actual assertion execution, current-environment/platform checks, preserved handoffs and repair accounting, and honest total-cost comparisons. Output safety needs checks at the actual write when a subprocess can change the destination. Reused verification must account for external inputs before being treated as current evidence.
 
 Adopt the process lessons into the specification, not native scientific contracts or custom verification machinery. Recorded lessons are evidence to assess, not new authority by themselves. The review did not execute either delivery system, run their tests, or reproduce historical lesson experiments. Exploration and prototype promotion are a proposed response to the owner's workflow request; their efficiency remains to be evaluated in downstream use.
+
+## Additional source reviewed October 11, 2026
+
+### R11 — OpenClaw test audit
+
+[Test audit skill](https://github.com/openclaw/openclaw/blob/main/.agents/skills/test-audit/SKILL.md).
+
+The complete skill text was read at current `main`; this register does not claim a pinned historical snapshot. Adapt its questions about credible regressions and duplicate proof, scrutiny of test-only production seams, evidence before pruning, and retention of independent static contracts into specification section 5.3 and the existing skills. These are adapted criteria, not a copied or installed skill.
+
+Do not import its repository-specific commands, tool dependencies, deletion targets, or subsystem campaign workflow. Implementation/history discovery belongs only to authorized implementation-aware roles; blind A/B keep their restricted inputs. Tests at different layers remain useful when they cover distinct risks, and a test-only seam needs justification rather than an automatic ban. Existing ownership, baseline/regression evidence, and approval rules govern any corrections.
 
 ## Previously discussed sources retained for posterity
 
