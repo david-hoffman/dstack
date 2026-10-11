@@ -70,7 +70,7 @@ These observations support delivery routes based on uncertainty and consequences
 
 Adopt the process lessons into the specification, not native scientific contracts or custom verification machinery. Recorded lessons are evidence to assess, not new authority by themselves. The review did not execute either delivery system, run their tests, or reproduce historical lesson experiments. Exploration and prototype promotion are a proposed response to the owner's workflow request; their efficiency remains to be evaluated in downstream use.
 
-## Additional source reviewed October 11, 2026
+## Additional sources reviewed October 11, 2026
 
 ### R11 — OpenClaw test audit
 
@@ -79,6 +79,16 @@ Adopt the process lessons into the specification, not native scientific contract
 The complete skill text was read at current `main`; this register does not claim a pinned historical snapshot. Adapt its questions about credible regressions and duplicate proof, scrutiny of test-only production seams, evidence before pruning, and retention of independent static contracts into specification section 5.3 and the existing skills. These are adapted criteria, not a copied or installed skill.
 
 Do not import its repository-specific commands, tool dependencies, deletion targets, or subsystem campaign workflow. Implementation/history discovery belongs only to authorized implementation-aware roles; blind A/B keep their restricted inputs. Tests at different layers remain useful when they cover distinct risks, and a test-only seam needs justification rather than an automatic ban. Existing ownership, baseline/regression evidence, and approval rules govern any corrections.
+
+### R12 — OpenClaw autoreview
+
+[Skill](https://raw.githubusercontent.com/openclaw/agent-skills/main/skills/autoreview/SKILL.md), [diagnostic and result guidance](https://raw.githubusercontent.com/openclaw/agent-skills/main/skills/autoreview/references/diagnostics-and-results.md), and [shared entrypoint guidance](https://raw.githubusercontent.com/openclaw/agent-skills/main/skills/autoreview/references/repository-entrypoint.md).
+
+The complete skill and both linked references were read from `main`; subagents also inspected selected helper sections governing review prompts, completion, and source snapshots. This was a documentation-fit assessment, not a full implementation audit or an executed demonstration. Commit-pinned web retrieval failed, so no pinned source-byte claim is made.
+
+Adapt the distinctions between assessment completion, findings, filtering, and reviewer failure; verification of findings before repair; explicit scope and material context limits; and preservation of required evidence across large-review portions. Carry them into section 4's review-result contract and existing skills/state fields. Prioritizing advisory concerns by likelihood, impact, and repair complexity cannot waive an approved obligation. Missing context must be reported without exposing blind A/B to implementation.
+
+Do not adopt its default P0-only filter, engine/model choices or access retries, its restricted reviewer filesystem, unlimited default pass planning, live shared-install updates, scanner-free policy, or custom runner/schema/output machinery. Dstack retains its approved obligations, role access, task budgets, versioned adoption, and correction ownership. No upstream helper was installed or run, and effectiveness was not measured.
 
 ## Previously discussed sources retained for posterity
 

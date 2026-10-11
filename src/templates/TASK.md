@@ -75,12 +75,14 @@ Approval authorizes the recorded routine role transitions, checks, in-scope corr
 
 ## Current state
 
-- Decision and status:
-- Exact revision/tree and test checkpoint:
-- Classified findings and unresolved limits:
+- Decision and status; independent assessment complete/incomplete/unavailable, with a verdict only when complete:
+- Exact revision/tree and test checkpoint; assigned review scope, context provenance, and exclusions/filtering:
+- Classified findings, dispositions, and unresolved limits:
 - Applicable evidence/report links:
 - Next role/action:
 - Remaining budget, review-window rounds, and task-wide repair allowance:
+
+For independent review, apply the [review-result contract](../DELIVERY-SYSTEM-SPEC.md#review-results-and-finding-disposition) within these existing fields. Missing material context or unfinished review portions prevent acceptance; verify findings and record confirmed, rejected, unresolved, or advisory dispositions. Severity and repair cost cannot waive approved obligations.
 
 Maintain this one concise state; link earlier accepted reports instead of copying them. A/B receive a separate approved public-contract packet, never prototype internals, exploration notes, or implementation-bearing status.
 
