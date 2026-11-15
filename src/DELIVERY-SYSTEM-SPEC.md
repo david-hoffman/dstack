@@ -132,6 +132,18 @@ At most one implementation repair is allowed by default, task-wide across C and 
 
 Keep one concise Current state: decision, revision, classified findings, evidence links, next role and remaining allowances. Link earlier accepted reports rather than recopying them. A/B get a separate public-contract packet, never implementation-bearing status. Record compact evidence as in section 9; no separate database.
 
+### Review results and finding disposition
+
+Every independent reviewer records the assigned scope, exact base/candidate or test checkpoint, role-permitted context used, and exclusions or severity filtering in the existing Current state and linked review evidence. State whether the assessment is **complete, incomplete, or unavailable**, separately from the acceptance or corrections-needed verdict. Only a complete assessment can accept the assigned obligations. A complete assessment may still require corrections. Empty or invalid output, a successful process exit, filtered findings, or an earlier clean portion cannot establish acceptance of an unfinished assessment.
+
+Verify reported findings against the approved task and permitted evidence before commissioning repairs. An actionable finding names the credible trigger, expected versus actual outcome, violated obligation or concrete reachable risk, location/evidence, consequence, and uncertainty. Record its disposition: confirmed for the authorized correction owner, rejected with counter-evidence, unresolved with the missing evidence or decision, or an advisory tradeoff with a rationale. Likelihood, impact, and repair complexity help prioritize additional concerns; they cannot waive approved behavior, security/authority, or selected verification obligations. A material unresolved finding blocks acceptance; changed meaning or gates still need the normal owner-approved path. Do not repeat reviews solely to obtain a nicer verdict.
+
+Identify missing material context rather than treating its absence as proof of correctness or a defect. An unavailable caller, contract, dependency, fixture, or asset that prevents the assigned assessment leaves it incomplete. Relevant unchanged context must correspond to the candidate or have explicitly justified provenance and applicability. It supports reasoning without changing the assigned scope, pinned policy, or edit authority. D and bounded reviewers still assess the approved behavior and authority change, not only edited lines. A/B obtain only permitted public-contract/test evidence through the coordinator; missing context grants no implementation or history access.
+
+If a large review needs several portions, plan their scopes and cross-cutting obligations within the existing approved budget before starting. Preserve required evidence and complete every assigned portion before an overall acceptance; truncation or an unfinished portion makes that assessment incomplete. Retain earlier evidence only under the existing applicability rules. Splitting review adds no required role, weakens no freshness boundary, and does not replenish spending, review windows, or repair allowances. Failed and incomplete attempts consume budget; completed correction verdicts count under the existing round rules.
+
+These report-quality rules adapt [OpenClaw autoreview](REFERENCES.md#r12--openclaw-autoreview) without importing its runner, priority threshold, model defaults, or installation/update mechanism.
+
 ### Submission and acceptance
 
 By default, canonical full local verification must pass on the exact submission candidate before opening/updating its PR; required CI platforms and independent final review must also pass before readiness/merge. Incremental checks guide edits, not replace this gate. For eligible routine work only, section 6 describes a separately approved CI-authoritative pilot. Known applicable failures block submission until classified repair and relevant local checks establish that their cause is addressed; never open a PR solely to run a known failing candidate.
@@ -187,6 +199,22 @@ The A/B/C routes below apply to high-risk work. Bounded work keeps its authorize
 | A selected metric remains unmet without a justified behavioral test or safe simplification | Report the shortfall and tradeoff for an explicit owner policy decision under section 5.1, or remain blocked. Do not recycle the same unexplained gap through A/B/C/D. |
 
 Validate untrusted public inputs and protect real invariants where the contract or a concrete reachable failure calls for it. Do not add finite/positive checks to every internal value, introduce new error behavior, force impossible internal states, or write duplicate implementation-coupled tests solely to satisfy a percentage. Difficult but reachable failures may warrant smaller tests through suitable boundaries; they must assert a meaningful outcome. If a discovery cannot be expressed within the blind packet, resolve the contract or policy issue before commissioning a test. Supplemental tests retain that label. Classification and corrections preserve the existing budget, review rounds, and repair limits; changing the finding's name or route does not replenish them.
+
+### 5.3. Test value and safe pruning
+
+Apply this checklist when adding or materially changing tests, using the existing requirement mapping and review evidence:
+
+- Name the approved observable behavior or independently meaningful contract the test protects.
+- Describe a credible wrong outcome that the assertions detect, and why existing tests would miss it. Another test layer needs a distinct risk or boundary; prefer extending a suitable existing case over repeating the same proof.
+- Justify the test boundary. Flag any requested production export, hook, global, or wrapper used only by tests; prefer an existing public boundary where it can prove the same obligation. A justified way to exercise a difficult reachable failure remains valid.
+
+Challenge assertions that compare a result with itself, expectations computed by the subject, mocks or fixtures that supply the behavior being claimed, and negative controls that pass because an unrelated guard rejects the input. A copied inventory or source-string check needs an independent contract, such as a required protocol byte, configuration key, package path, or architecture restriction. Static inspection, slowness, or sensitivity to a refactor alone does not justify deletion.
+
+Before removing or consolidating tests/assertions, extend the existing obligation mapping with the exact test/location, failure it detects, remaining test or check that preserves each obligation, and risk and validation commands. If no proof remains, establish that no approved obligation is lost; uncertainty requires retention or intake/promotion. The existing independent reviewer compares the removed assertions with the retained proof. Treat a meaningful baseline failure as a possible defect to diagnose, not evidence that its test is obsolete. Repairs still need their own authorized scope.
+
+Implementation-aware discovery stays with the authorized bounded worker/reviewer or D: inspect relevant owners, callers, overlapping tests, and history to verify why a test or test-only seam exists. Remove an obsolete seam only through its authorized product or infrastructure owner, with renewed verification and review. A/B use only their permitted public-contract/test packet and source-free evidence; they never read implementation or history to complete this checklist. Route findings and high-risk corrections under section 5.2 without combining ownership or expanding file permissions.
+
+These criteria adapt [OpenClaw's test audit](REFERENCES.md#r11--openclaw-test-audit) within the existing four skills. Use them to preserve useful proof, with no deletion target, separate audit role, or campaign requirement.
 
 ## 6. Ordinary GitHub CI
 
