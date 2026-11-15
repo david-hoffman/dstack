@@ -23,7 +23,7 @@ lesson guide. Identify the threads actually seen; zero lessons is valid. Observe
 cannot approve requirements, change policy, or certify the prototype.
 
 On requested prototype promotion, start fresh architecture/task intake. Inspect
-and pin the prototype's full commit before formal delivery approval; record any
+and pin the prototype's full commit before formal delivery execution; record any
 uncommitted reference as unresolved until frozen. Separate desired behavior from
 observed choices, accidental behavior, and known bugs. Read back material choices to
 preserve or reject, then use the normal authorization and risk route below. Either
@@ -46,10 +46,10 @@ components, public interfaces, verification and operation. A task produces one
 behavior contract with stable requirement IDs, scenarios, non-goals and authorized
 execution. A scenario is a distinct approved decision and observable outcome;
 equivalent values may be coverage examples. Distinct rejection, interpretation,
-output guarantees or boundary outcomes are separate scenarios. Start with roughly
-five as a planning heuristic, approve a larger coherent contract once if needed,
-and do not combine unrelated obligations to meet that heuristic. Extra equivalent
-data within accepted behavior and budget do not need fresh approval.
+output guarantees or boundary outcomes are separate scenarios. There is no default
+scenario cap. Split only for coherent contracts and feasible dependencies; do not
+combine unrelated obligations to evade scope. Extra equivalent data within accepted
+behavior and actual human-set limits do not need fresh approval.
 For bugs, separate observation, expected behavior and unverified cause. Unknown
 reproduction may need a bounded report-only investigation, not a speculative fix.
 
@@ -64,18 +64,19 @@ evidence. A maps these obligations and B independently audits omissions; bounded
 uses its existing independent reviewer. A's tests alone do not certify completeness.
 Do not silently replace an installed 100% gate. A changed metric, target, scope or exclusion
 uses the independently reviewed, owner-approved policy amendment path and authorized
-infrastructure changes, with explicit active-task migration and preserved allowances.
+infrastructure changes, with explicit active-task migration and preserved accounting.
 
 Select the route by risk, not changed-line count, and record its reason:
 - Non-policy mechanical/documentation: one worker, reviewable deterministic diff,
-  owner acceptance and any contract-required review; no changed executable
+  relevant checks and any contract-required review; no changed executable
   behavior, dependencies, checks, permissions or policy.
 - Bounded settled behavior or explicitly scoped infrastructure: one worker may
   inspect implementation and edit authorized product/tests/maintenance paths;
   a fresh independent reviewer checks oracle, behavior, gates, scope and candidate.
 - High-risk product or uncertain meaning: initially fresh root A/B/C/D, blind A/B
   owning tests and product C retaining all restricted-file rules. Scientific/binary/
-  custom oracles, permission/security authority and unsettled interfaces belong here.
+  custom oracles, data-loss behavior, permission/security authority and unsettled
+  interfaces belong here. A small conventional overwrite/truncation fix is still high risk.
 - High-risk infrastructure: fresh blind A, fresh blind B, fresh root infrastructure
   author using existing implement-task in `infrastructure author` mode, then fresh D.
   A/B own tests; that author owns only the named infrastructure files/settings.
@@ -83,18 +84,20 @@ Mixed product/infrastructure work requires separately scoped fresh product C and
 fresh infrastructure author. A/B and D cover the full behavior/authority contract;
 D inherits neither author's conversation. Infrastructure authorization never relaxes
 product C's restrictions; policy documentation retains its separate path.
-Policy documentation uses a separate worker and fresh independent policy reviewer,
-with explicit owner approval of the identified patch before downstream activation.
+Policy documentation uses a separate worker and fresh independent policy reviewer.
+The request must authorize adoption before downstream activation; preparation alone
+does not activate a patch or migrate an in-flight task.
 It cannot call itself mechanical or fabricate product-red evidence. Changed
 tests/fixtures and dependency/workflow/gate maintenance need independent review
 and their own authorized scope. Removed assertions need a reviewed obligation
 mapping. Promote uncertain or mixed impact unless separately approved contracts
 justify a split; a lower-tier failure does not authorize a new scientific repair.
-Stop the bounded worker on promotion pending my explicit approval of the identified
-high-risk contract, route, named infrastructure/settings ownership where applicable,
-checks and budget. Do not merely switch the bounded worker to a different mode.
+Stop the bounded worker on promotion and record the high-risk contract, route, named
+infrastructure/settings ownership where applicable, and checks. Obtain missing scope
+or authority, then launch the required fresh roles; do not merely switch the bounded
+worker to a different mode or ask again for scope I already authorized.
 
-Before task approval, record an existing committed, owner-approved local delivery
+Before task execution, record an existing committed, owner-approved local delivery
 policy revision, its full target Git commit, adopted policy paths, and the upstream
 provenance reference as recorded at that revision. Do not use the task's eventual hash.
 Keep that policy baseline through completion; newer rules do not silently replace it.
@@ -102,25 +105,23 @@ Keep that policy baseline through completion; newer rules do not silently replac
 Read back the exact interpretation and Authorized execution once: tier/reason,
 role route, named author/mode and owned files/settings, edit scope, prerequisite/
 canonical checks, per-role model/effort and selection reason, local/CI gate mode,
-escalation triggers, budget, review windows/caps and allowances. Choose configurations
-for semantic/review complexity, using
-applicable calibration; do not assume A/B need less capability than C. Missing
-semantics return to intake, and model changes do not reset blindness or allowances.
+escalation triggers, and actual human-set limits/units/hard stops, or not set. Choose
+configurations for semantic/review complexity using applicable calibration; do not
+assume A/B need less capability than C. Missing
+semantics return to intake, and model changes do not restore blindness or erase accounting.
 
-A complete explicit instruction from me may itself authorize a mechanical or
-bounded task. Record the actual instruction, scope, tier, checks, budget and inherited
-constraints; send a concise read-back without asking for a redundant second yes.
-High-risk contracts require explicit approval of the identified proposal, including
-the route and named edit ownership. Policy changes require independent policy review
-and explicit approval of the identified
-patch before activation. Record my real response/reference and the document/commit
-it covers. Never manufacture approval or infer it from silence. Material unanswered
-questions, new scope or a new budget require an answer before dependent work.
-Approved routine transitions, checks, unchanged-scenario redistribution and an
-in-scope correction within remaining allowances need no repeat approval. Changed
-behavior/interfaces/permissions/data sharing, tier downgrade, budget extension or
-exhausted repair allowance need renewed approval. Approved in-flight rule migration
-must preserve earlier windows, attempts, spending and repairs.
+A complete direct instruction from me authorizes its intended scope on every route,
+including high-risk and policy work. Record the actual instruction/reference, concrete
+contract, tier, named ownership, checks and inherited constraints; send a concise
+read-back without requiring another yes to a document that restates my request.
+Keep required independent review and fresh roles. Ask only for a missing material
+decision, outside-request scope, an extension to an actual limit, or explicit external
+action authority. Never manufacture approval or infer it from silence. Routine role
+transitions, necessary checks and diagnosed in-scope corrections follow the existing
+authorization. A policy-preparation request alone authorizes neither activation nor
+active-task migration; record the adoption/migration instruction when supplied.
+Commit, push, merge, release and external messages require explicit authority for
+those actions. Preserve historical attempts, spending and repairs through migration.
 
 Use full canonical local verification of the exact submission candidate and all
 required CI as the default, meeting the approved behavior/risk obligations and every
@@ -135,25 +136,26 @@ Cheap bounded interpreter/lock/install/isolation and actual
 reviewer-launch prerequisites precede expensive dependent checks. Stop and diagnose
 their failures instead of treating a configured name or unchanged path as proof.
 
-Record approved per-window review caps. Every completed correction review consumes
-a round. After two nonacceptances, stop and diagnose; another attempt needs a bounded
-diagnosed correction under the approved path within remaining allowances. Default:
-one task-wide implementation repair. New sessions/windows or narrower reviews never
-reset spending or repairs. Authorized A/C may continue their own correction session
+There are no default review, repair or execution caps and no mandatory budget allocation.
+Record every review, correction, diagnosis and failed attempt cumulatively. Diagnose
+recurring nonacceptances and each correction, then continue required checks/review until
+completion or a real blocker or actual human-set limit. New sessions, narrower reviews
+or task splits erase no accounting. Authorized A/C may continue their own correction session
 while scope and A's blindness hold; B/D verdicts remain fresh and independent.
 Infrastructure-author repair requires a fresh infrastructure author and fresh D
-within that same task-wide repair allowance; the A/C continuation exception does
-not extend to infrastructure author.
+within the authorized scope and actual limits; the A/C continuation exception does
+not extend to infrastructure author. The coordinator launches roles; each recipient
+is already the assigned role and performs it directly without launching another role.
 
 Before commissioning a coverage correction, classify it under spec section 5.2. Missing
 approved behavior or concrete reachable risk needs a source-free public reproduction
 for blind A/B. Needless implementation complexity belongs to C, new semantics to intake,
 and measurement/configuration faults to authorized infrastructure. An unresolved selected
 metric needs an explicit owner policy decision or remains blocked; never send the same
-unexplained gap through repeated A/B/C/D cycles. Keep existing budgets and repair limits.
+unexplained gap through repeated A/B/C/D cycles. Keep actual human-set limits and accounting.
 
 No code or executable test suite during architecture/task intake. Stop formal
-preparation on an unanswered material question or its budget. No additional
+preparation on an unanswered material question or an actual human-set limit. No additional
 interviewing agents.
 
 Prepare behavior/public-interface inputs and role-permitted policy text from the
@@ -164,11 +166,17 @@ guide is installed as root LESSONS/README.md; A/B may read it and the approved p
 never LESSONS/ entries, broad documentation trees or implementation-bearing status.
 The authorized product worker/C may receive the pinned prototype reference; a
 separately authorized infrastructure author receives only relevant references
-within its named scope. Expected results still need independent justification.
+within its named scope. Before blind probes/tests, prepare source-free warnings,
+tracebacks and subprocess diagnostics that retain category/message/location/status.
+Disclose any implementation exposure, stop blind work and use a fresh permitted role;
+clearing context cannot restore blindness. Expected results need independent justification.
+For numerical work, specify reference meaning, units, conditioning, precision and
+justified tolerances. Distinguish the requested scientific accuracy/recovery from a
+finite result or completed run; do not invent an acceptance threshold after observing it.
 Maintain one concise Current state and linked evidence/metrics in the task. Preserve
 applicable accepted reports, rerun invalidated evidence, and record missing metering
 as unknown rather than zero. Do not create a controller or evidence database.
 Start with what is already known and the highest-impact unanswered question.
 ```
 
-Append the request, sources, and existing budget/context. A complete brief may need only a final clarification/read-back rather than a long interview.
+Append the request, sources, context and any actual limits. A complete brief may need only a concise read-back rather than an interview.

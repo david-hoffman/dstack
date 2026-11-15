@@ -32,30 +32,37 @@ For coverage friction, use spec sections 5.1–5.2 and the task's pinned project
 Classify a missing approved behavior/risk, needless implementation complexity, unresolved
 semantics, or measurement/configuration fault before proposing a correction. An uncovered
 branch alone does not justify a new requirement or another A/B cycle. Preserve blind
-source-free test corrections, author ownership, spending and remaining allowances.
+source-free test corrections, author ownership, spending and actual human-set limits.
 Do not lower an existing gate or activate a relaxation through a failing task's repair.
 An evidenced mismatch may justify a separately reviewed, owner-approved policy amendment;
 reconcile affected instructions/checks and explicitly migrate active tasks before use.
 
 Check rule interactions across tier boundaries/ownership, complete-request authorization,
-blind packets, correction scope, author continuation, model/effort choices, budget and
-allowances, evidence validity, gates, and installed paths. Default submission still needs
+blind packets, correction scope, author continuation, model/effort choices, actual limits,
+cumulative accounting, evidence validity, gates, and installed paths. Default submission needs
 full exact-candidate canonical local verification plus required CI, approved behavior/risk
 evidence, and every selected measured target. Unselected metrics are advisory; missing
 required measurements or unmet selected targets still block. Keep high-risk fresh root
 blind A/B, the authorized fresh root product C and/or infrastructure author, and fresh root D.
-Promotion stops a bounded worker pending explicit
-approval of the high-risk contract/route, named infrastructure/settings scope, checks, and
-budget. Existing implement-task infrastructure author mode owns only that named scope;
+Data-loss behavior stays high risk even for a small conventional fix. Promotion stops a
+bounded worker; record the high-risk contract/route, named infrastructure/settings scope
+and checks, resolve missing authority and launch the required fresh roles. Reuse scope
+already authorized by the request. Existing implement-task infrastructure author mode
+owns only that named scope;
 product C retains absolute restrictions, tests stay with A/B, and policy is separately
 reviewed documentation. Mixed work separates the authors; D inherits neither conversation.
-Infrastructure repairs use a fresh root infrastructure author and fresh D within the existing
-task-wide default single repair, with no infrastructure author continuation exception.
+Infrastructure repairs use a fresh root infrastructure author and fresh D within authorized
+scope and actual limits, with no infrastructure author continuation exception.
 Changed tests/fixtures always get independent review. Delta review expands for dependencies,
 retains only applicable accepted evidence, and labels post-implementation tests supplemental.
 Fresh B/D remain independent; A/C continuation never restores blindness or resets scope,
-spending, rounds, or the task-wide repair allowance. Diagnose after two nonacceptances;
-retain prior attempts and require an approved resolution within remaining allowances.
+spending or review/repair accounting. The coordinator owns launches; a recipient performs
+its assigned role directly without launching another role. Prepare source-free warnings,
+tracebacks and subprocess diagnostics before blind probes, retaining category/message/
+location/status. Disclose exposure and use a
+fresh permitted role. No scenario/review/repair/execution cap or budget allocation is
+implied. Diagnose recurring nonacceptances and each correction, then continue required
+checks/review to completion or a real blocker or actual human-set limit. Retain every attempt.
 
 Do not activate a CI-authoritative route merely by editing a permissive sentence. It needs
 its own identified owner-approved policy pilot, eligible settled lower-tier scope, verified
@@ -65,7 +72,7 @@ protection, or authority edits; unknown/ineffective controls block eligibility. 
 aggregates reject failed/cancelled/skipped/neutral/absent/incomplete results. Known applicable
 failures block submission until classified repair and relevant local checks establish that
 their cause is addressed. Waiting pilot PRs remain unverified, never ready; failed CI stops
-readiness and spends existing allowances. No merge/release authority is delegated.
+readiness and remains in cumulative accounting. No merge/release authority is delegated.
 
 Keep one lesson home. Do not silently move an existing LESSONS.md, docs/LESSONS/, or other
 layout or rewrite entries. A separate migration needs explicit preservation/link approval;
@@ -76,26 +83,32 @@ approved contracts/instructions; D assesses the candidate before implementation 
 
 Present the exact diff, lesson/evidence IDs, rule interactions, and expected improvement.
 Use a relevant public/synthetic procedural example when practical, with honest limitations;
-a prompt-string check does not prove agent behavior. Obtain fresh independent policy review
-and my explicit approval of the identified patch before activation. Align spec, installed/
+a prompt-string check does not prove agent behavior. My complete direct request authorizes
+its intended policy scope; record that instruction and a concrete read-back without a
+duplicate document-approval checkpoint. Obtain fresh independent policy review before
+authorized activation. Preparation alone authorizes neither activation nor active-task
+migration. Ask only for missing material decisions, outside-request scope, actual-limit
+extensions or external action authority. Align spec, installed/
 generated AGENTS, templates/intake, affected procedures, guides, and examples together.
-A rollout requires preagreed acceptance criteria and budget for documentation, conventional
-bounded, infrastructure, and high-risk public/synthetic pilots; no completed owner-data rerun
+A rollout requires authorized scope, preagreed acceptance criteria and actual limits for
+documentation, conventional bounded, infrastructure and high-risk public/synthetic pilots;
+no completed owner-data rerun
 just for benchmarking. Suspend an affected lighter route for missed obligations, exposure,
 false acceptance, or unresolved gaps. Wider adoption needs comparison and approval; a ten-task
-follow-up needs a separate budget and does not establish quality equivalence. Do not run pilots
+follow-up needs its own authorized scope and does not establish quality equivalence. Do not run pilots
 or settings changes without their separate scope/authorization.
 
-Obtain authorization before committing, pushing, or merging; preserve authorization already
-given for the identified candidate/actions. Then use normal Git/PR and append a lesson
+Obtain explicit authorization before committing, pushing, merging, releasing or sending
+external messages; preserve authorization already given for the identified candidate/actions.
+Then use normal Git/PR and append a lesson
 disposition linking the approved change. Keep in-flight tasks on their pinned rules unless
-explicitly migrated; never erase attempts or reset allowances. Preserve upstream repository/
+explicitly migrated; never erase attempts, spending or actual limits. Preserve upstream repository/
 version/tag/commit provenance and local adaptation notes in docs/PROJECT.md. Target Git records
 local approval/revisions; do not bump official package VERSION or call a local patch an upstream
 release. An upstream upgrade is separate reconciliation under section 10.
 
-Report what was verified, what remains unknown, and the approved budget/remaining allowances.
+Report what was verified, what remains unknown, and actual human-set limits/use, or not set.
 Account for model/effort, checks, review/calibration/rework, failed launches, owner waits, and
 missing metering honestly; overlapping durations are not additive elapsed time. No autonomous
-retry loop or unapproved reviewer/budget expansion. Stop at the approved limit.
+retry loop or outside-request expansion. Stop at an actual human-set limit.
 ```
