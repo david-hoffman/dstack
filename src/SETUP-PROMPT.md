@@ -24,7 +24,10 @@ needs an approved minimal project record before stack selection; exploration may
 provisional choices. Repeated setup completes approved gaps; it does not overwrite
 working choices or implement product features.
 
-Show a small setup plan with scope/checks/budget and obtain approval before applying it.
+Read back a small setup plan with scope/checks and actual human-set limits, or not set.
+My direct request authorizes its intended scope on every route; ask only for missing
+material decisions, outside-request scope, actual-limit extensions or external authority.
+Do not require another yes to a plan that restates an already complete request.
 Install one canonical specification and four skills at supported harness paths, preserve
 the product README, and reconcile AGENTS.md from templates/AGENTS.template.md. Add a thin
 native bridge only if required. Record actual launch/check/doctor commands, installed
@@ -43,14 +46,15 @@ verify relevant lessons and promote approved public facts; D assesses the candid
 
 When changing upstream base, compare previous upstream, new upstream, and local adapted
 instructions across every adopted component and migration note. Show the full diff and
-obtain independent policy review and explicit approval before activation/updating the
-base record. Do not mix releases, overwrite local adaptations, or fabricate upstream
+obtain independent policy review before authorized activation/updating the base record.
+A preparation request alone does not authorize adoption. Do not mix releases, overwrite
+local adaptations, or fabricate upstream
 versions. In-flight tasks keep their pinned approved local policy unless explicitly
-migrated; preserve earlier attempts, spending, and allowances.
+migrated; preserve earlier attempts, spending, and actual limits.
 
 Align tier rules and ownership across the spec, installed/generated AGENTS, task/intake
 records, role procedures, and guides before activating a policy change. Policy adoption
-requires my explicit approval of the identified patch and fresh independent policy review;
+requires an instruction authorizing adoption and fresh independent policy review;
 it is not mechanical editing and requires no fabricated product-red evidence.
 Record an approved local policy commit before delivery; each task pins that existing
 commit, never its own eventual hash. Supply A/B only permitted text from that revision.
@@ -69,8 +73,9 @@ It maintains notes/handoffs, not approvals, policy, direction, or readiness cert
 
 A request to promote starts fresh architecture/task intake. Pin the reference prototype
 at a full commit before approving delivery; distinguish desired behavior from accidental
-behavior, defects, and implementation suggestions. Obtain applicable architecture/task,
-route, and budget approvals under normal rules. Choose new implementation from the
+behavior, defects, and implementation suggestions. Record the concrete architecture/task,
+route, ownership and actual limits; resolve material choices not settled by my request.
+Choose new implementation from the
 integration baseline or hardening/refactoring the prototype. Give high-risk A/B only
 approved public behavior and permitted policy, without prototype internals, exploration
 transcripts, or lesson entries; C may use the pinned prototype. Expected results need
@@ -78,31 +83,40 @@ independent justification. Later tests are supplemental/regression evidence and 
 initially; do not force a rewrite or manufacture red to claim original test-first work.
 
 Record each task's tier/reason, route, edit scope, checks, per-role model/effort choices,
-gate mode, escalation triggers, budget, and allowances. Mechanical non-policy work uses
+gate mode, escalation triggers and actual human-set limits/units/hard stops, or not set.
+Mechanical non-policy work uses
 one worker, with optional independent review unless required by the contract. Bounded
 settled behavior or scoped dependency/lint/workflow maintenance uses an authorized worker
 who may edit named tests/maintenance files and a fresh independent reviewer; preserve
-settled gates/platform semantics. Scientific/numerical, binary, custom-oracle, security/
+settled gates/platform semantics. Scientific/numerical, binary, custom-oracle, data-loss, security/
 permission, substantial-interface, unresolved or uncertain work uses fresh root blind A/B,
 fresh root product C and/or the expressly authorized infrastructure author, and fresh root D.
-Authority/permission promotion stops the bounded worker until I explicitly approve the
-identified high-risk contract, route, named infrastructure/settings ownership, checks,
-and budget. Infrastructure-only high risk uses A -> B -> infrastructure author -> D;
+Even a small conventional overwrite/truncation fix remains high risk. Promotion stops
+the bounded worker; record the high-risk contract, route, named infrastructure/settings
+ownership and checks, resolve missing authority, then launch the required fresh roles.
+Reuse authority already supplied in my request. Infrastructure-only high risk uses
+A -> B -> infrastructure author -> D;
 use the existing implement-task in infrastructure author mode for named infrastructure/
 settings only. Tests remain with A/B; policy patches use separate independent policy review.
 Mixed work assigns separate fresh product C and infrastructure author sessions; A/B and D
 cover all behavior/authority, and D inherits neither author conversation. Product C keeps
 absolute restrictions on infrastructure/settings and other restricted files; promotion
 never silently switches modes or relaxes C. An authorized infrastructure repair uses a
-fresh root infrastructure author and fresh D within the task-wide default single repair.
+fresh root infrastructure author and fresh D within authorized scope and actual limits.
 The infrastructure author has no continuation exception.
 Mixed/uncertain scope takes the highest tier; changed tests/fixtures always get independent
 review. A/B stay blind; high-risk C retains restricted-file rules. A may continue its own
 author session only while blindness and approved scope remain intact; C may continue its
-own session for an authorized repair within allowances. B/D remain fresh and independent.
-No context clearing, new session, model swap, or delta resets rounds, budget, or repairs.
-Count completed correction reviews in their recorded window; diagnose after two
-nonacceptances. Default task-wide implementation repair allowance remains one.
+own session for an authorized repair. B/D remain fresh and independent. The coordinator
+launches roles; a recipient is already the assigned role and performs it directly without
+launching another role. Before blind probes/tests, prepare source-free warnings,
+tracebacks and subprocess diagnostics retaining category/message/location/status.
+Disclose exposure, stop blind work and use a fresh permitted role; context clearing
+does not restore blindness. There are no default scenario/review/repair/execution caps
+or mandatory budget allocations. Count every review, correction, diagnosis and failed
+attempt cumulatively. Diagnose recurring failures and each correction, then continue
+required checks/review to completion or a real blocker or actual human-set limit.
+No new session, task split, model swap or delta erases earlier attempts or spending.
 
 Infer languages/frameworks and preserve suitable native formatting/lint/type/test tools.
 Create/adapt initial ordinary CI and minimal test infrastructure only as authorized setup.
@@ -134,12 +148,16 @@ prerequisites before expensive dependent phases; stop and diagnose failed prereq
 Check real native commands and required platforms for compatibility. Test review checks
 expectation sources, valid alternatives, units/tolerances, plausible wrong behavior, and
 actual assertion execution. A maps behavior and relevant high-risk paths; B independently
-audits omissions before accepting tests. Bounded work uses its existing reviewer. Classify
+audits omissions before accepting tests. Derive numerical tolerances from the contract,
+independent reference, conditioning and precision; finite/completed execution alone
+does not establish scientific accuracy or recovery. Initially passing tests are valid;
+do not manufacture red. Bounded work uses its existing reviewer. Classify
 coverage findings under spec section 5.2 before correction: approved behavior/test gaps go
 to blind A/B through source-free public reproductions, needless product complexity to C,
 new semantics to intake, measurement/configuration faults to authorized infrastructure, and
 unresolved selected-metric conflicts to an explicit owner policy decision. Preserve role
-ownership, blindness, and remaining allowances; never recycle an unexplained gap or invent
+ownership, blindness, cumulative accounting and actual limits; never recycle an
+unexplained gap or invent
 internal guards/tests just to improve a percentage. Distinguish environment/fixture, test,
 product, and unresolved requirement failures before authorized repair. For verification/
 evidence helpers writing logs or reports, check the actual destination leaf/ancestors and protected targets
@@ -160,19 +178,21 @@ submission; full exact-candidate CI on every platform and independent review pre
 readiness and my merge action. Any failed/cancelled/skipped/neutral/absent/incomplete
 platform/shard/report fails the aggregate. Known applicable failures block submission
 until classified repair and relevant local checks establish that their cause is addressed.
-A waiting pilot PR is unverified, never ready. CI failures stop readiness and spend
-existing allowances; repaired updates renew the approved local gate and full CI.
+A waiting pilot PR is unverified, never ready. CI failures stop readiness and remain in
+cumulative accounting; repaired updates renew the approved local gate and full CI.
 Invalidated candidate/base/environment/version evidence needs renewed checks/review.
 Unknown controls or unavailable exact artifact proof block eligibility. Fall back to
 full local gating if prerequisites lapse. No merge/release authority is delegated.
 
 Implement delivery doctor only as a thin invocation of review-work in doctor mode using
 DOCTOR-PROMPT.md. --check reports without edits. A confirmed policy gap produces a focused
-spec/instruction diff, independent policy review and explicit patch approval before
-activation/authorized commit. Doctor preserves upstream provenance, never bumps the
+spec/instruction diff and independent policy review before authorized activation.
+Preparation alone does not activate it or migrate active tasks. Commit/push/merge/release
+and external messages require explicit action authority. Doctor preserves upstream
+provenance, never bumps the
 official package version, and never repairs a product defect by weakening requirements.
 
-Before any rollout demonstration, agree acceptance criteria and a bounded budget for
+Before any rollout demonstration, record authorized scope, acceptance criteria and actual limits for
 one documentation task, one conventional bounded repair, one infrastructure task, and
 one high-risk public/synthetic task. Use honest route-appropriate evidence: high-risk
 A/B, meaningful baseline/test checkpoint, C, exact green local/CI checks, and D; no
@@ -185,15 +205,16 @@ patch where supported by real evidence; zero useful lessons and a documented no-
 doctor outcome are valid.
 
 Keep in-flight tasks on original rules unless explicitly migrated without resetting
-allowances. Suspend a lighter route on missed material obligations, source exposure,
-false acceptance, or unresolved gaps; diagnose within existing allowances before retrying.
+accounting. Suspend a lighter route on missed material obligations, source exposure,
+false acceptance, or unresolved gaps; diagnose within scope and actual limits before retrying.
 Compare complete accepted-task resource cost and elapsed critical path separately, with
 model/effort/token/cost evidence, failed launches, calibration/rework/checks, owner waits,
-scenarios versus coverage examples, review windows/rounds, repairs, and defects. Unknown
+scenarios versus coverage examples, cumulative review rounds, repairs, and defects. Unknown
 metering stays unknown; overlapping durations are not additive elapsed time. Choose
 model quality by oracle/acceptance complexity, not role name; A/B are not default cheaper
 than C. Calibration for blind roles uses independently reviewed public/synthetic material.
 Escalation requires diagnosis and never restores blindness or resolves missing semantics.
-Wider adoption or a ten-task follow-up requires separate approval/budget. Stop at the
-approved budget and report remaining gaps; do not automatically merge or release.
+Wider adoption or a ten-task follow-up requires its own authorized scope. Stop at an
+actual human-set limit and report remaining gaps; absent limits are not set. Do not
+automatically commit, push, merge or release.
 ```
