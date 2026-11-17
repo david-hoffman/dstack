@@ -28,6 +28,16 @@ work at the correct tier. Do not rewrite intended behavior to match a defect or 
 approve architecture drift. Policy editing is not mechanical self-approval and requires
 no fabricated product-red evidence or scientific A/B tests.
 
+For a reusable reliability check under section 8, record its change/risk trigger,
+concrete check, supporting evidence and applicability in existing project instructions.
+Select checks from each task's pinned policy; they never replace canonical checks.
+Prefer correcting or retiring ineffective checks to accumulating rules. When reviewer
+evaluation is within the request, use section 9, Evaluate review checks: known defects,
+comparable stable clean controls, held-out cases, and detection/error counts plus cost.
+Blind A/B receive only independently reviewed sanitized public packets. Newly proposed
+checks stay advisory during evaluation; existing gates and material findings still bind.
+Documentation preparation alone does not authorize evaluation or rollout execution.
+
 For coverage friction, use spec sections 5.1–5.2 and the task's pinned project policy.
 Classify a missing approved behavior/risk, needless implementation complexity, unresolved
 semantics, or measurement/configuration fault before proposing a correction. An uncovered

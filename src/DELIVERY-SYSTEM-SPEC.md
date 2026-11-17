@@ -168,6 +168,17 @@ Test review checks expectation sources, legitimate alternative representations/o
 
 Check state changes during an operation as well as starting inputs. An approved verification/evidence helper must preserve protected targets before writing logs/reports: resolve/check the actual output leaf and ancestors immediately before each write, including after subprocesses, and protect tracked paths plus private/common Git metadata. Detecting damage afterward cannot undo it.
 
+Choose the test method for the obligation and record its expectation source in the existing requirement mapping. These methods complement one another; no task must use every method or meet a test-type quota.
+
+| Situation | Useful method and evidence |
+|---|---|
+| Observable user behavior | Exercise the real application, executable, or public API and assert outputs and effects. |
+| Many inputs share an approved invariant | Property tests for round trips, idempotence, conservation, ordering, or other justified relationships; retain failing inputs and reproduction details. |
+| Behavior-preserving rewrite or migration | Differential tests against an identified, approved reference on representative and generated inputs; record permitted normalization and intended differences. |
+| Scientific or numerical behavior | Independently justified examples and properties, with contract-based units, scales, and tolerances. |
+
+A property must follow from approved behavior; a round trip alone can miss a matching encoder/decoder error. A prior implementation is a comparison reference, not automatic authority: identify the behavior to preserve, known defects, and approved exceptions. Do not normalize away a meaningful difference or compute both sides through the same candidate code. Complement equivalence with independently justified examples where correctness is at issue. A/B receive only approved public contracts, reference identities and permitted executable interfaces through their source-free packet, never implementation/history or raw incident reports. New semantics return to intake; ordinary method and input selection within settled meaning remain delegated test design.
+
 Use integration or unit tests for a genuine gap: difficult error injection, combinatorial logic, or a branch that would make a whole-system test slow or brittle. No unit-test quota or fixed test-type percentage. Do not forbid valid negative assertions or property tests just because a heuristic dislikes them.
 
 Test owned components together where practical. Stub uncontrollable external services at their boundary, document what is not exercised, and use an approved provider sandbox check where integration correctness requires it. Do not mock the internal path whose behavior is the requirement. Use synthetic data, isolated state, readiness checks rather than fixed sleeps, and bounded waits. A suite that fails and then passes on retry still needs investigation; do not hide flakiness.
@@ -224,6 +235,12 @@ Implementation-aware discovery stays with the authorized bounded worker/reviewer
 
 These criteria adapt [OpenClaw's test audit](REFERENCES.md#r11--openclaw-test-audit) within the existing four skills. Use them to preserve useful proof, with no deletion target, separate audit role, or campaign requirement.
 
+### 5.4. Verification recipes
+
+In the project record's existing verification section, record or link a reproducible recipe for relevant real-entry-point behavior: prerequisites and isolated test data, launch command, readiness signal with a bounded wait, public action, expected observable result, failure diagnostics, and cleanup of only the recipe's disposable resources. Capture useful diagnostics before cleanup, including on failure or timeout. For libraries or one-shot CLIs, invocation may replace launch/readiness; do not invent a server. During setup, label unavailable paths and missing prerequisites honestly instead of claiming an unexecuted recipe passed.
+
+Use existing commands and artifacts, with a short outcome and known untested boundaries in the normal evidence receipt. Keep the recipe fast enough for iterative use and investigate flaky steps; a green retry does not settle a failure. A focused recipe guides development but does not replace canonical local checks, required CI, selected coverage, or exact-candidate evidence. Changes to test infrastructure keep their existing ownership and review requirements. This is content for the existing project record and four skills, not a fifth skill or custom runner.
+
 ## 6. Ordinary GitHub CI
 
 Use the monorepo's ordinary GitHub Actions workflow. Prefer one required job, `verify`, running the project's canonical checks in order. A genuine multi-platform need may require several jobs; keep every required result visible. No custom gate publisher or GitHub App.
@@ -271,6 +288,8 @@ Run it on demand after a real recurring failure, a meaningful project change, or
 3. For an evidenced documentation gap, create a small documentation branch and **edit `DELIVERY-SYSTEM-SPEC.md` itself**, plus directly affected prompts/skills/project notes. Do not merely emit recommendations. Correct or replace an existing rule before adding one. No supported gap means no edit or commit.
 4. Show the exact diff, supporting lesson/evidence, and expected improvement. Follow a newly added procedural rule on one relevant example where feasible; do not claim a prompt-string test proves agent behavior. Obtain fresh independent policy review of the identified patch before activation within the owner-requested scope; a check/proposal request alone does not authorize adoption. Do not fabricate product-red evidence for a documentation change, auto-merge or make it the policy for an in-flight task.
 5. Commit only when explicitly authorized, referencing the lesson, owner instruction and independent review. Append a lesson disposition such as “addressed by commit …”; do not rewrite its original entry.
+
+For an evidenced recurring failure that warrants a reliability check, use a compact form in the affected existing instructions: **diff trigger → concrete check → supporting incident/evidence → applicability and limits**. For example, a persistence-schema change can trigger checking that an older supported record loads without a newly optional field. The coordinator or implementation-aware reviewer selects relevant checks from the task's pinned policy; the candidate cannot revise the rules judging itself. Give A/B only permitted public expectations, not linked incident histories. Selection focuses review attention and never omits canonical checks or cross-cutting obligations. Section 9's optional evaluation can assess a proposal; making it a gate still follows policy review and authorized adoption. Consolidate duplicate or obsolete guidance through policy review while preserving its obligations; one incident does not justify a universal rule.
 
 Downstream doctor preserves the recorded upstream source/version/tag/commit and never bumps the official package version or claims a local patch is an upstream release. Record local changes and their approval in target Git; keep adaptation notes in `docs/PROJECT.md` current. Git commits/PRs supply local revision history and rollback. Do not create numbered copies of the specification or put a commit's own hash inside the bytes it identifies. An upstream package release is separate maintainer work under [the release policy](README.md#package-versioning). Runtime dependencies retain their real versions.
 
@@ -330,6 +349,16 @@ Measure elapsed critical path from task/PR start to readiness/merge separately f
 Before calling setup usable, demonstrate architecture routing on empty/existing projects, clarification and actual authorization, a high-risk fresh A/B meaningful-baseline/checkpoint → C → passing exact-candidate checks → D route, applicable approved lower-tier pilots, a failing PR blocked by native requirements where available, one normal passing PR, and doctor from available evidence. Exercise exploration handoff and promotion instructions on a relevant example and state whether they ran or were walked through. Append a lesson only if a useful finding exists; a truthful no-gap doctor result needs no edit. Record actual results and gaps. No custom acceptance-test matrix or platform certification is required. Any executable helper added downstream needs ordinary independent tests, preferably through its real entry point.
 
 The handoff is not a running system until those demonstrations and the GitHub configuration actually exist. Unsupported protection or missing evidence must be reported plainly. Never claim that prompt-only safeguards were mechanically verified.
+
+### Evaluate review checks
+
+An optional evaluation can test whether existing or proposed review instructions detect consequential defects. It uses the existing calibration and evidence process, within authorized scope and any actual owner-set limits; it is not a new delivery phase or a benchmark service. Establish a baseline with the current instructions before adding rules.
+
+- Freeze a small set of permitted historical changes with known defects and comparable stable changes as controls, matched for relevant size, risk, and task family. Independently establish the expected finding and consequence; a revert alone is not a bug diagnosis and a stable change is not proof of correctness. Keep answer keys out of the evaluated reviewer's inputs and adjudicate unexpected findings against evidence.
+- Recreate the review context at the identified pre-fix candidate and governing policy, excluding later fixes, incident explanations, and outcome labels. Implementation-aware reviews may inspect permitted historical diffs; blind A/B use independently reviewed public/synthetic packets with source-free diagnostics. Do not rerun completed owner-data workloads just to benchmark or import private histories without authority.
+- Separate instruction-tuning cases from held-out cases. Record policy, model/effort, case identities, actual findings and dispositions, material defects caught/missed, false alarms, time, and available cost/owner effort in ordinary review evidence. Show counts and denominators, and compare under equivalent inputs. Cases used to tune instructions cease to be held out; small samples do not establish defect-rate equivalence.
+
+Proposed checks may be observed without adding a new gate while their usefulness is assessed. Existing accepted obligations and material unresolved findings still block normally; advisory status never excuses a known defect or waives required verification. Activation follows the existing policy-review/adoption path, with active tasks retaining their pinned rules. Revise or drop ineffective proposals and preserve required obligations when consolidating rules. These practices adapt the [verification article](REFERENCES.md#r14--claude-code-verification) without automatic bypasses, flaky-test deletion, or extra reviewer roles.
 
 ## 10. Package and sources
 

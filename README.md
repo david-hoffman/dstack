@@ -118,6 +118,8 @@ Where explicitly approved in the installed policy governing the task, A may cont
 
 ## Testing and GitHub checks
 
+Each project records or links a [verification recipe](src/DELIVERY-SYSTEM-SPEC.md#54-verification-recipes): isolated inputs, invocation/readiness, a public action and expected result, useful diagnostics, and cleanup of its disposable resources. Choose property tests for approved invariants and differential tests for approved behavior-preserving comparisons alongside real-entry-point tests. Focused recipes accelerate iteration while canonical acceptance checks remain binding.
+
 Tests primarily exercise the real product entry point: browser journeys through the actual application and backend, CLI execution with outputs and exit codes, or public service/library APIs. Expected results come from the contract, not the implementation being tested. Integration and unit tests fill genuine gaps such as difficult error injection or combinatorial logic; there is no unit-test quota or fixed test-type percentage.
 
 Test review checks independent expectation sources, legitimate alternative inputs/results, units and tolerances, plausible wrong behavior, and whether the intended assertion actually executes. Real native commands and required-platform runs establish compatibility; mocked command success or a broken fixture cannot establish it. For verification/evidence helpers writing logs or reports, check destination changes during execution and protected paths immediately before writes, including after subprocesses.
@@ -155,6 +157,8 @@ Profile slow tests before restructuring. Reuse immutable builds only when all ma
 Measure elapsed critical path separately from aggregate model/runner cost, including calibration, rework, owner waits, and owner effort. Record available per-role usage, tokens, spend, check wall time, review rounds, scenarios/examples, repairs, and defects. Overlapping durations are not additive elapsed time; missing metering is unknown, not zero. Savings claims need a complete comparable baseline and current verified prices, with small-sample limits reported.
 
 ## Lessons and doctor maintenance
+
+Useful reliability checks have a concrete change trigger, check, supporting evidence, and applicability in the existing instructions. An optional [reviewer evaluation](src/DELIVERY-SYSTEM-SPEC.md#evaluate-review-checks) uses permitted historical defects, comparable stable changes and held-out cases to measure useful findings, misses, false alarms, and effort. It does not automatically run on every task or turn an experimental check into a gate.
 
 New target installations use root `LESSONS/`, with `LESSONS/README.md` adapted from the [format guide](src/LESSONS.md) and individual append-only entries. It records useful surprises, gotchas, failed approaches, and instruction gaps. Entries distinguish confirmed findings from hypotheses and link evidence such as tests, commits, or CI runs. Corrections append a superseding entry; owner-authorized sensitive-data removal is the exception. No useful finding means no entry. Secrets, personal data, full prompts, transcripts, and private reasoning do not belong in the log.
 

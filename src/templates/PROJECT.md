@@ -17,7 +17,11 @@ Link canonical schemas/contracts. Distinguish current state from proposed change
 ## Verify and operate
 Canonical build/lint/type/test/E2E/coverage commands, supported targets, dependency-lock identity, installation and test data setup, report locations, and recovery/release instructions. Record cheap bounded prerequisites: actual interpreter/platform, install/import health, required isolated/nested environments, and actual reviewer launch/authentication/connectivity. Stop expensive dependent checks on failure; an unchanged environment path is not perpetual proof of health.
 
+Record or link the relevant [verification recipes](../DELIVERY-SYSTEM-SPEC.md#54-verification-recipes): isolated inputs/prerequisites → launch/invocation → readiness and bounded wait where applicable → public action → expected result → failure diagnostics → cleanup of the recipe's disposable resources. Name untested boundaries and unavailable prerequisites; retain diagnostics before cleanup on success, failure, or timeout. Reuse existing commands and evidence receipts. Focused recipes complement the canonical gate; they do not replace it.
+
 Record the actual native fresh-root session, terminal wait/notification, and doctor invocations, available models/supported effort settings, and relevant public/synthetic calibration evidence. Do not invent tools or assume a configured reviewer can launch. Bounded waits need timeout/failure handling; new helpers, shards, or host setup require their own authorized infrastructure scope and independent review.
+
+When an optional [review-check evaluation](../DELIVERY-SYSTEM-SPEC.md#evaluate-review-checks) is authorized, link its case/policy/model identities, tuning/held-out split, results and limitations through existing calibration evidence. Keep answer keys and outcome-bearing evidence outside the evaluated reviewer's packet. This record does not commission an evaluation or activate a proposed gate.
 
 Record the actual exploration/intake and prototype-promotion entry points. Exploration may use provisional choices before this architecture record is approved; formal delivery returns to approved project/task records and the applicable tier/gate.
 
