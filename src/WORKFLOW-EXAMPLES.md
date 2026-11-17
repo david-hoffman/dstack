@@ -38,6 +38,18 @@ The same applies to a settled function contract with 33 input examples: record t
 
 If review reveals an unsettled collation convention, stop dependent work and return that meaning to intake. A lower-tier failure does not authorize a new interface or scientific repair.
 
+## Verification recipe and comparison tests
+
+For the ordering repair above, the project recipe names a temporary input directory, the installed CLI invocation, expected output and exit code, captured stdout/stderr, and cleanup of only that directory after preserving diagnostics. No server-readiness step is needed. A focused run demonstrates the changed behavior; canonical local checks and required CI still establish readiness for the exact candidate.
+
+For a behavior-preserving serializer rewrite, the approved contract can justify generated round-trip cases and comparison with a pinned prior executable. Independently specified examples check field meanings, units, and required bytes: two matching mistakes can survive a round trip. Record known baseline defects and approved differences; normalization cannot hide a semantic change. If the work requires blind A/B, supply only public contracts and permitted executable access with source-free results, not the old implementation. Method choice adds no new role or test-count quota.
+
+## Evaluate a proposed reliability check
+
+Suppose a permitted historical defect shows that adding an optional saved-record field broke older records. Doctor first checks whether existing instructions already cover it. A justified proposal records the schema-change trigger, old-record loading check, supporting evidence, and supported-version limits in the existing instructions.
+
+An authorized optional evaluation presents implementation-aware reviewers with pinned pre-fix changes and comparable stable controls, withholding incident explanations and answer keys. It compares current versus proposed instructions on equivalent inputs and reserves separate cases for evaluation after tuning. Record caught and missed material defects, adjudicated false alarms, and effort; an unexpected real defect in a control is not a false alarm merely because the change was stable. No historical owner workload is rerun. The proposal remains advisory until authorized policy adoption; violations of existing obligations remain blocking. These are illustrative procedures, not executed demonstrations.
+
 ## Authorized infrastructure maintenance
 
 Request: “Update the pinned lint tool and its invocation, preserving existing supported platforms, required checks, discovery, coverage, and permissions.”

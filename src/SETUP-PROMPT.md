@@ -34,6 +34,13 @@ native bridge only if required. Record actual launch/check/doctor commands, inst
 path mapping, omissions, and adaptations. Carry VERSION, CHANGELOG.md, and package policy
 as mapped references; adapt relative links and preserve required source references once.
 
+Record a reproducible project verification recipe under spec section 5.4: isolated inputs,
+launch/invocation and readiness where applicable, a public action and independently
+justified expected outcome, diagnostics, and cleanup of only its disposable resources
+with bounded waits. Reuse existing commands; do not add a fifth skill or
+verification framework. Focused recipes supplement full canonical checks. Preserve
+source-free permitted recipe inputs/results for blind A/B.
+
 For a new lesson home, adapt the source LESSONS.md format guide
 to root LESSONS/README.md and append individual evidenced entries under LESSONS/.
 Do not create a second live log or silently relocate an existing LESSONS.md, docs/LESSONS/,
@@ -120,8 +127,11 @@ No new session, task split, model swap or delta erases earlier attempts or spend
 
 Infer languages/frameworks and preserve suitable native formatting/lint/type/test tools.
 Create/adapt initial ordinary CI and minimal test infrastructure only as authorized setup.
-Keep public-entry-point/end-to-end tests and smaller tests for genuine gaps. Before formal
-test design, explain coverage choices under spec section 5.1 and obtain my choice once:
+Keep public-entry-point/end-to-end tests and smaller tests for genuine gaps. Select
+property/differential checks under spec section 5 when useful, with contract-derived
+invariants or an independent reference/approved baseline and intended differences;
+no method quota or wider blind-role access follows. Before formal test design, explain
+coverage choices under spec section 5.1 and obtain my choice once:
 behavior coverage with risk review (recommended for ordinary application work), or that
 evidence plus a selected line, statement, branch, or combined measured target. Lines and
 statements are different metrics; 100% is a valid explicit target, not an implied default.
@@ -191,6 +201,12 @@ Preparation alone does not activate it or migrate active tasks. Commit/push/merg
 and external messages require explicit action authority. Doctor preserves upstream
 provenance, never bumps the
 official package version, and never repairs a product defect by weakening requirements.
+
+Keep reusable reliability checks in existing project instructions under spec section 8,
+with trigger, check, evidence and applicability. Workers/reviewers use the task's pinned
+policy; relevant selection never skips canonical checks. Optional reviewer evaluation
+follows spec section 9, Evaluate review checks, only within authorized evaluation scope.
+New proposed checks remain advisory during evaluation; existing gates still bind.
 
 Before any rollout demonstration, record authorized scope, acceptance criteria and actual limits for
 one documentation task, one conventional bounded repair, one infrastructure task, and

@@ -1,6 +1,6 @@
 # References and reading scope
 
-Package version: [VERSION](VERSION). Source register updated: October 11, 2026. Initial design review: September 26, 2026. This is a source register and design note, not an archive of original source bytes or a substitute for downstream code/security review.
+Package version: [VERSION](VERSION). Source register updated: November 16, 2026. Initial design review: September 26, 2026. This is a source register and design note, not an archive of original source bytes or a substitute for downstream code/security review.
 
 ## Sources read for the initial design
 
@@ -10,7 +10,7 @@ The complete pstack README, the five selected skill texts below, and the complet
 
 [README](https://github.com/cursor/plugins/blob/main/pstack/README.md).
 
-The project offers a broad collection of skills, principles, playbooks, and multi-agent mechanisms. This design does not install that collection. Only the specific ideas below are adapted. Its README's general proceed-without-human-confirmation principle is not adopted: intake still needs actual owner authorization, with the specification's narrow complete-instruction exception for lower tiers. No named model defaults are copied.
+The project offers a broad collection of skills, principles, playbooks, and multi-agent mechanisms. This design does not install that collection. Only the specific ideas below are adapted. Its README's general proceed-without-human-confirmation principle is not adopted: intake still needs actual owner authorization, which a complete direct request can supply within its intended scope under the specification. No named model defaults are copied.
 
 ### R2 — Test behavior, not implementation
 
@@ -88,7 +88,7 @@ The complete skill and both linked references were read from `main`; subagents a
 
 Adapt the distinctions between assessment completion, findings, filtering, and reviewer failure; verification of findings before repair; explicit scope and material context limits; and preservation of required evidence across large-review portions. Carry them into section 4's review-result contract and existing skills/state fields. Prioritizing advisory concerns by likelihood, impact, and repair complexity cannot waive an approved obligation. Missing context must be reported without exposing blind A/B to implementation.
 
-Do not adopt its default P0-only filter, engine/model choices or access retries, its restricted reviewer filesystem, unlimited default pass planning, live shared-install updates, scanner-free policy, or custom runner/schema/output machinery. Dstack retains its approved obligations, role access, task budgets, versioned adoption, and correction ownership. No upstream helper was installed or run, and effectiveness was not measured.
+Do not adopt its default P0-only filter, engine/model choices or access retries, its restricted reviewer filesystem, unlimited default pass planning, live shared-install updates, scanner-free policy, or custom runner/schema/output machinery. Dstack retains its approved obligations, role access, actual owner-set limits, versioned adoption, and correction ownership. No upstream helper was installed or run, and effectiveness was not measured.
 
 ## Downstream follow-up reviewed November 14, 2026
 
@@ -104,6 +104,16 @@ Inspected the clean local simrecon snapshot at `1211f453360ff1143feed69982250394
 Read-only inspection of the [doctor entry point](https://github.com/david-hoffman/simrecon/blob/1211f453360ff1143feed6998225039482b55ef5/src/simrecon/_delivery.py) and [verification helper](https://github.com/david-hoffman/simrecon/blob/1211f453360ff1143feed6998225039482b55ef5/scripts/verify.py) corroborates the small harness wrapper and checks beyond command success: candidate/input identity, reports and artifacts. Only explicitly named external inputs are fingerprinted. Neither helper supplies source-free blind diagnostics; captured verification output is not a safe blind packet without coordinator preparation. Child exit status alone establishes neither policy acceptance nor compliance. No helper was executed or copied.
 
 Historical task summaries and lesson entries are evidence with limits, not fresh executed demonstrations. Many underlying ignored run artifacts were unavailable. No system, scientific implementation or historical experiment was run here, and no comparative efficiency claim is established. Keep upstream package provenance, exploration, the four skill names and existing check obligations. Do not import simrecon's fixed version banners, extra audit skill, destructive cleanup duties, native launchers or custom evidence machinery. Its local policy is not authority to activate this package in another repository.
+
+## Additional source reviewed November 16, 2026
+
+### R14 — Claude Code verification
+
+[How the Claude Code team thinks about verification](https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/), Addy Osmani, published November 16, 2026.
+
+The article's substantive text was read through the web search index after direct page retrieval failed. No original-byte archive, visual inspection, or reading of linked articles is claimed. Adapt practical verification recipes, property/differential test selection, conditional incident-backed checks, and optional reviewer evaluation into the existing documents and four skills.
+
+Preserve dstack's independent expectations, blind packets, pinned policy, exact-candidate gates, authorization, and safe-pruning requirements. Do not copy automatic bypass after repeated blocked commits, deletion of unresolved flaky tests, extra reviewer roles, or claims of measured gains. Evaluation and downstream pilots were not executed for this documentation change; effectiveness remains to be assessed.
 
 ## Previously discussed sources retained for posterity
 
